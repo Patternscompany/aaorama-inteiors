@@ -1,0 +1,117 @@
+/*
+Template Name: Aaorama interiors & Architects
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+/*********************center_home****************/
+.center_hm {
+background: #0000009c;
+padding-top:100px;
+padding-bottom:100px;
+}
+.center_h {
+background-image: url(../img/banner.png);
+background-position: center;
+}
+.center_hl{
+padding-top:80px; 
+ }
+/*********************center_home_end****************/
+
+/*********************work****************/
+.work_1ri1:hover{
+background:#252531!important;
+color:#fff;
+ }
+.work_1ri1:hover p{
+color:#fff;
+ }
+/*********************work_end****************/
+
+
+/*********************offer_o****************/
+#offer_o {
+background-image: url(../img/1.jpg);
+background-position: center;
+}
+/*********************offer_o_end****************/
+
+
+@media screen and (max-width : 767px){
+.center_hm {
+padding-top: 50px;
+padding-bottom: 50px;
+}
+.center_hl{
+padding-top:0;
+margin-bottom:15px;
+ }
+.center_hl h6{
+text-align:center;
+ }
+.center_hl .font_60{
+font-size:40px;
+ }
+.center_hl br{
+display:none;
+ }
+.center_hr{
+text-align:center;
+ }
+.work_1l{
+margin-bottom:15px;
+text-align:center; 
+ }
+.work_1ri1 {
+margin-top:8px;
+margin-bottom:8px;
+text-align:center; 
+ }
+.work_1ri1 p{
+text-align:left; 
+ }
+.work_2l img{
+height:auto; 
+ }
+.work_2ri {
+text-align:center; 
+ }
+.work_2ril {
+margin-bottom:15px; 
+ }
+
+.serv_1  br{
+display:none; 
+ }
+
+.offer_lil{
+margin-top:10px; 
+ }
+.team_1r  p{
+text-align:left; 
+ }
+.team_1l p{
+text-align:left; 
+ }
+
+ }
+
+@media (min-width:576px) and (max-width:767px) {
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.center_hl .font_60{
+font-size:40px;
+ }
+
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+
+
+
