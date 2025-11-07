@@ -94,7 +94,7 @@
           </ul>
         </li>
 		<li class="nav-item">
-          <a class="nav-link " href="#" >  Gallery
+          <a class="nav-link " href="gallery.html" >  Gallery
           </a>
       
         </li>
@@ -254,7 +254,7 @@
         <div class="offer_r">
           <div class="grid clearfix">
             <figure class="effect-jazz mb-0">
-              <a href="#"><img src="img/what-we-offer.png" height="340" class="w-100" alt="Interior Design"></a>
+              <a href="#"><img  src="img/what-we-offer.png" height="340" class="w-100 offer-img" alt="Interior Design"></a>
             </figure>
           </div>
         </div>
@@ -268,7 +268,7 @@
         <div class="offer_r">
           <div class="grid clearfix">
             <figure class="effect-jazz mb-0">
-              <a href="#"><img src="img/why-choose.png" height="500" class="w-100" alt="Architecture Design"></a>
+              <a href="#"><img src="img/why-choose.png" height="500" class="w-100 offer-imgg" alt="Architecture Design"></a>
             </figure>
           </div>
         </div>
@@ -316,6 +316,77 @@
     </div>
   </div>
 </section>
+
+<style>
+ 
+    /* From Uiverse.io by chris_6688 */ 
+     #offer {
+  width: 100%;
+  height: 100%;
+  background-color: #121212; /* Dark background color */
+  background-image: radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 0
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size:
+    40px 40px,
+    20px 20px,
+    20px 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+ #offer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.03) 10px,
+    rgba(255, 255, 255, 0.03) 20px
+  );
+  z-index: -1;
+  opacity: 0.8;
+}
+
+ #offer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 60px 60px;
+  z-index: -1;
+  opacity: 0.6;
+}
+#offer .offer-img{
+  border-radius: 5% 25% 5% 25%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+}
+#offer .offer-imgg{
+  border-radius: 25% 5% 25% 5%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+}
+
+
+</style>
 
 <section id="serv" class="p_5">
   <div class="container-fluid">
