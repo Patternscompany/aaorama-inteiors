@@ -7,10 +7,12 @@ Licence: <a href="https://www.templateonweb.com/license">Website Template Licenc
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=GFS+Didot&display=swap');
 
 body{
 /* font-family: 'Lora', serif; */
-font-family: "Bodoni Moda", serif;
+/* font-family: "Bodoni Moda", serif; */
+font-family: "GFS Didot", serif;
 }
 ul{
 list-style:none;
