@@ -26,6 +26,9 @@ background-image: url(../img/banner.png);
 .center_h2{
 background-image: url(../img/construction-banner.png);
 }
+.center_h3{
+background-image: url(../img/interiors/herointeriors.jpg);
+}
 
 .center_hl{
 padding-top:80px; 
