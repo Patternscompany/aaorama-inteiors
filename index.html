@@ -917,6 +917,96 @@ document.querySelectorAll(".closeBtn").forEach(btn => {
     }
   </script>
 
+  <!-- Chatbot Widget -->
+<div id="chatbot" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; font-family: Arial, sans-serif;">
+  
+  <!-- Chatbot Button -->
+  <div id="chatbot-button" 
+       style="width: 60px; height: 60px; background: #ff9800; border-radius: 50%; display: flex; 
+              justify-content: center; align-items: center; cursor: pointer; 
+              box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+              animation: pulse 1.5s infinite;">
+    🤖
+  </div>
+
+  <!-- Chat Window -->
+  <div id="chat-window" 
+       style="width: 320px; height: auto; background: #fff; border-radius: 10px; 
+              margin-top: 10px; display: none; box-shadow: 0px 4px 12px rgba(0,0,0,0.3); padding: 15px; position: relative;">
+
+    <!-- Close Button -->
+    <div id="close-chat" 
+         style="position: absolute; top: 8px; right: 10px; font-size: 20px; 
+                cursor: pointer; color:#333; font-weight:bold;">
+      ✖
+    </div>
+
+    <div id="chat-messages" style="margin-bottom: 15px; margin-top: 20px;">
+      <p style="background:#f1f1f1; padding:10px; border-radius:7px;">
+        Hello, this is Mounika 👋<br>How can I assist you?
+      </p>
+
+      <button onclick="showContact('estimate')" 
+              style="width:100%; padding:10px; margin-top:10px; background:#ff9800; color:white;
+                     border:none; border-radius:5px; cursor:pointer;">
+        Estimate Interiors Cost
+      </button>
+
+      <button onclick="showContact('design')" 
+              style="width:100%; padding:10px; margin-top:10px; background:#4caf50; color:white;
+                     border:none; border-radius:5px; cursor:pointer;">
+        Request a Design Consultation
+      </button>
+    </div>
+
+    <div id="contact-info" style="display:none;">
+      <p style="background:#e8f5e9; padding:10px; border-radius:7px;">
+        📍 <b>Address</b><br>
+        6-38, Huda Trade Centre, Shopping Complex,<br>
+        Nallagandla, Serilingampalle (M), Hyderabad,<br>
+        Telangana 500019
+      </p>
+      <p style="background:#fff3e0; padding:10px; border-radius:7px;">
+        📞 <b>Contact</b><br>
+        9966911136<br>
+        9573872734
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Animation and Script -->
+<script>
+  // Pulse animation
+  const style = document.createElement("style");
+  style.innerHTML = `
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Toggle Chat Window
+  document.getElementById("chatbot-button").onclick = function() {
+    const win = document.getElementById("chat-window");
+    win.style.display = win.style.display === "none" ? "block" : "none";
+  };
+
+  // Close Chat Window
+  document.getElementById("close-chat").onclick = function() {
+    document.getElementById("chat-window").style.display = "none";
+  };
+
+  // Show Contact Info
+  function showContact(option) {
+    document.getElementById("contact-info").style.display = "block";
+  }
+</script>
+
+
 </body>
 
 </html>
