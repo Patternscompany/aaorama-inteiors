@@ -548,8 +548,6 @@
 <!-- <audio id="popupAudio" src="sound.mp3"></audio> -->
 
 <style>
-      /* Popup Overlay */
-      /* General Popup Style */
 .popup {
   position: fixed;
   bottom: 20px;
@@ -604,13 +602,28 @@
     </style>
 
 <script>
-      const popups = ["popup1", "popup2"];  
+const popups = ["popup1", "popup2"];
 let currentPopup = 0;
 
-// Show first popup on page load
-window.addEventListener("load", () => {
-  document.getElementById(popups[0]).style.display = "block";
-});
+// Function to show popup for today
+function showDailyPopup() {
+  const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
+  const lastShown = localStorage.getItem("popupShownDate");
+
+  // If not shown today → show popup
+  if (lastShown !== today) {
+    document.getElementById(popups[0]).style.display = "block";
+  }
+}
+
+// Save today's date when popup closes
+function savePopupShown() {
+  const today = new Date().toISOString().split("T")[0];
+  localStorage.setItem("popupShownDate", today);
+}
+
+// Show daily popup on page load
+window.addEventListener("load", showDailyPopup);
 
 // Close popup & show next
 document.querySelectorAll(".closeBtn").forEach(btn => {
@@ -620,15 +633,17 @@ document.querySelectorAll(".closeBtn").forEach(btn => {
 
     currentPopup++;
 
-    // Show next popup if exists
+    // If next popup exists, show it
     if (currentPopup < popups.length) {
       document.getElementById(popups[currentPopup]).style.display = "block";
+    } else {
+      // All popups closed → save that user seen today's popup
+      savePopupShown();
     }
   });
 });
+</script>
 
-
-    </script>
 
 
   <section id="testim" class="p_3 carousel_p">
