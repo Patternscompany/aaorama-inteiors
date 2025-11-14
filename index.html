@@ -119,11 +119,11 @@
                       class="fa fa-long-arrow-right font_14 me-1 align-middle"></i>Architectural Services</a></li>
                 <li><a class="dropdown-item" href="interior-services.html"><i
                       class="fa fa-long-arrow-right font_14 me-1 align-middle"></i>Interior Services</a></li>
-                      
-                      <li><a class="dropdown-item" href="endtoendsolutions.html"><i
+
+                <li><a class="dropdown-item" href="endtoendsolutions.html"><i
                       class="fa fa-long-arrow-right font_14 me-1 align-middle"></i>End to End Solutions</a></li>
 
-                      <li><a class="dropdown-item" href="modular.html"><i
+                <li><a class="dropdown-item" href="modular.html"><i
                       class="fa fa-long-arrow-right font_14 me-1 align-middle"></i>Modular</a></li>
 
 
@@ -159,7 +159,7 @@
                   +919966911136</span></a>
                   <a class="d-inline-block text-muted" href="#"><br> <span class="text-black fw-bold font_14">
                   +919573872734</span></a> -->
-                <a class="button" href="#">Get a Free Quote</a>
+              <a class="button" href="#">Get a Free Quote</a>
             </li>
 
           </ul>
@@ -169,7 +169,7 @@
   </section>
 
   <style>
- 
+
   </style>
   <section id="center" class="center_h center_h1">
     <div class="center_hm">
@@ -178,7 +178,7 @@
           <div class="col-md-7">
             <div class="center_hl">
               <h1 class="text-white font_60">
-                Transform Your Spaces  Into a Masterpiece
+                Transform Your Spaces Into a Masterpiece
               </h1>
               <p class="mt-4 text-light">
                 With over 13+ years of expertise, we design elegant and functional kitchen interiors<br>
@@ -528,121 +528,120 @@
   </section>
 
 
-<!-- popup -->
-<!-- Popup 1 -->
-<div class="popup" id="popup1">
-  <div class="popup-content">
-    <img src="img/pop1.png" alt="">
-    <button class="closeBtn" data-close="popup1">×</button>
+  <!-- popup -->
+  <!-- Popup 1 -->
+  <div class="popup" id="popup1">
+    <div class="popup-content">
+      <img src="img/pop1.png" alt="">
+      <button class="closeBtn" data-close="popup1">×</button>
+    </div>
   </div>
-</div>
 
-<!-- Popup 2 -->
-<div class="popup" id="popup2">
-  <div class="popup-content">
-    <img src="img/pop2.png" alt="">
-    <button class="closeBtn" data-close="popup2">×</button>
+  <!-- Popup 2 -->
+  <div class="popup" id="popup2">
+    <div class="popup-content">
+      <img src="img/pop2.png" alt="">
+      <button class="closeBtn" data-close="popup2">×</button>
+    </div>
   </div>
-</div>
 
-<!-- <audio id="popupAudio" src="sound.mp3"></audio> -->
+  <!-- <audio id="popupAudio" src="sound.mp3"></audio> -->
 
-<style>
-.popup {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  z-index: 9999;
-}
-
-/* Popup Box */
-.popup-content {
-  position: relative;
-}
-
-/* Desktop Image */
-.popup-content img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-/* Close Button */
-.closeBtn {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* Mobile Only - Square Popup */
-@media (max-width: 480px) {
-  .popup-content img {
-    width: 70vw;
-    height: 70vw;
-    object-fit: cover;
-  }
-
-  .popup {
-    bottom: 10px;
-    right: 10px;
-  }
-}
-
-    </style>
-
-<script>
-const popups = ["popup1", "popup2"];
-let currentPopup = 0;
-
-// Function to show popup for today
-function showDailyPopup() {
-  const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
-  const lastShown = localStorage.getItem("popupShownDate");
-
-  // If not shown today → show popup
-  if (lastShown !== today) {
-    document.getElementById(popups[0]).style.display = "block";
-  }
-}
-
-// Save today's date when popup closes
-function savePopupShown() {
-  const today = new Date().toISOString().split("T")[0];
-  localStorage.setItem("popupShownDate", today);
-}
-
-// Show daily popup on page load
-window.addEventListener("load", showDailyPopup);
-
-// Close popup & show next
-document.querySelectorAll(".closeBtn").forEach(btn => {
-  btn.addEventListener("click", (e) => {
-    const closeId = e.target.dataset.close;
-    document.getElementById(closeId).style.display = "none";
-
-    currentPopup++;
-
-    // If next popup exists, show it
-    if (currentPopup < popups.length) {
-      document.getElementById(popups[currentPopup]).style.display = "block";
-    } else {
-      // All popups closed → save that user seen today's popup
-      savePopupShown();
+  <style>
+    .popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      z-index: 9999;
     }
-  });
-});
-</script>
+
+    /* Popup Box */
+    .popup-content {
+      position: relative;
+    }
+
+    /* Desktop Image */
+    .popup-content img {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Close Button */
+    .closeBtn {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Mobile Only - Square Popup */
+    @media (max-width: 480px) {
+      .popup-content img {
+        width: 70vw;
+        height: 70vw;
+        object-fit: cover;
+      }
+
+      .popup {
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+  </style>
+
+  <script>
+    const popups = ["popup1", "popup2"];
+    let currentPopup = 0;
+
+    // Function to show popup for today
+    function showDailyPopup() {
+      const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
+      const lastShown = localStorage.getItem("popupShownDate");
+
+      // If not shown today → show popup
+      if (lastShown !== today) {
+        document.getElementById(popups[0]).style.display = "block";
+      }
+    }
+
+    // Save today's date when popup closes
+    function savePopupShown() {
+      const today = new Date().toISOString().split("T")[0];
+      localStorage.setItem("popupShownDate", today);
+    }
+
+    // Show daily popup on page load
+    window.addEventListener("load", showDailyPopup);
+
+    // Close popup & show next
+    document.querySelectorAll(".closeBtn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const closeId = e.target.dataset.close;
+        document.getElementById(closeId).style.display = "none";
+
+        currentPopup++;
+
+        // If next popup exists, show it
+        if (currentPopup < popups.length) {
+          document.getElementById(popups[currentPopup]).style.display = "block";
+        } else {
+          // All popups closed → save that user seen today's popup
+          savePopupShown();
+        }
+      });
+    });
+  </script>
 
 
 
@@ -674,23 +673,31 @@ document.querySelectorAll(".closeBtn").forEach(btn => {
               <div class="testim_1i mx-0 row">
                 <div class="col-md-6">
                   <div class="testim_1i1 bg-light p-4">
-                    <img src="img/ts.png" alt="Client Testimonial 1" width="80" height="80"
-                      class="rounded-circle">
+                    <img src="img/ts.png" alt="Client Testimonial 1" width="80" height="80" class="rounded-circle">
                     <p class="mt-4">
-                      We are so grateful to have chosen aaorama for our recent project. We had the pleasure of working closely with the team. They were professional, supportive, and understood every part of what we wanted to capture in great detail. They captured not only the design of the space that we wanted to create, but also how we wanted guests to feel. Thank you so much for your help. I have been recommending your service to my friends and relatives as well 👌
+                      We are so grateful to have chosen aaorama for our recent project. We had the pleasure of working
+                      closely with the team. They were professional, supportive, and understood every part of what we
+                      wanted to capture in great detail. They captured not only the design of the space that we wanted
+                      to create, but also how we wanted guests to feel. Thank you so much for your help. I have been
+                      recommending your service to my friends and relatives as well 👌
                     </p>
                     <h5>
-vishal darai</h5>
+                      vishal darai</h5>
                     <!-- <h6 class="mb-0 col_brow">Homeowner, Hyderabad</h6> -->
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="testim_1i1 bg-light p-4">
-                    <img src="img/ts1.png" alt="Client Testimonial 2" width="80" height="80"
-                      class="rounded-circle">
+                    <img src="img/ts1.png" alt="Client Testimonial 2" width="80" height="80" class="rounded-circle">
                     <p class="mt-4">
-                      We’re absolutely thrilled with the work Aaorama Interiors did for us. Prashanth and Mounika turned our house into a glamorous space just as we envisioned. Prashanth’s coordination with his team was exceptional, and he went above and beyond to ensure we were completely satisfied. His dedication is unmatched. Mounika’s hard work and willingness to adapt to our needs truly shone through. Their attention to detail and understanding of the latest trends made the whole process smooth and enjoyable. We feel incredibly fortunate to have found them and are happy to recommend them for their outstanding work.
+                      We’re absolutely thrilled with the work Aaorama Interiors did for us. Prashanth and Mounika turned
+                      our house into a glamorous space just as we envisioned. Prashanth’s coordination with his team was
+                      exceptional, and he went above and beyond to ensure we were completely satisfied. His dedication
+                      is unmatched. Mounika’s hard work and willingness to adapt to our needs truly shone through. Their
+                      attention to detail and understanding of the latest trends made the whole process smooth and
+                      enjoyable. We feel incredibly fortunate to have found them and are happy to recommend them for
+                      their outstanding work.
                     </p>
                     <h5>Supriya Kidambi</h5>
                     <!-- <h6 class="mb-0 col_brow">Founder, RV Tech Solutions</h6> -->
@@ -704,13 +711,17 @@ vishal darai</h5>
               <div class="testim_1i mx-0 row">
                 <div class="col-md-6">
                   <div class="testim_1i1 bg-light p-4">
-                    <img src="img/ts2.png" alt="Client Testimonial 3" width="80" height="80"
-                      class="rounded-circle">
+                    <img src="img/ts2.png" alt="Client Testimonial 3" width="80" height="80" class="rounded-circle">
                     <p class="mt-4">
-                      It is really an awesome experience from this company aaorama to see the wonderful works of admirable architects and dedicated team of designers.
-I personally had an opportunity to enjoy every option and design that, you guys are presenting to your customers with true excitement in explaining and to execute the same with enriched knowledge of your engineers.
-It is a blessing for Hyderabad to such a team just to dream and to experiment our endless ideas without any hesitation.
-Kudos to the architects and designers for their amazing achievements highly appreciated n recommended ✌️
+                      It is really an awesome experience from this company aaorama to see the wonderful works of
+                      admirable architects and dedicated team of designers.
+                      I personally had an opportunity to enjoy every option and design that, you guys are presenting to
+                      your customers with true excitement in explaining and to execute the same with enriched knowledge
+                      of your engineers.
+                      It is a blessing for Hyderabad to such a team just to dream and to experiment our endless ideas
+                      without any hesitation.
+                      Kudos to the architects and designers for their amazing achievements highly appreciated n
+                      recommended ✌️
                     </p>
                     <h5>Pavan Bhargav</h5>
                     <!-- <h6 class="mb-0 col_brow">Villa Owner, Jubilee Hills</h6> -->
@@ -719,53 +730,56 @@ Kudos to the architects and designers for their amazing achievements highly appr
 
                 <div class="col-md-6">
                   <div class="testim_1i1 bg-light p-4">
-                    <img src="img/ts3.png" alt="Client Testimonial 4" width="80" height="80"
-                      class="rounded-circle">
+                    <img src="img/ts3.png" alt="Client Testimonial 4" width="80" height="80" class="rounded-circle">
                     <p class="mt-4">
-                      Finally found best interior designers, Really appreciated for the works and services. The design provided was really amazing and determined to help me find the perfect look for my space and specially project team works are extraordinary. Thanks aaorama and team 👌
+                      Finally found best interior designers, Really appreciated for the works and services. The design
+                      provided was really amazing and determined to help me find the perfect look for my space and
+                      specially project team works are extraordinary. Thanks aaorama and team 👌
                     </p>
                     <h5>sai prasad</h5>
                     <!-- <h6 class="mb-0 col_brow">Apartment Owner, Gachibowli</h6> -->
                   </div>
                 </div>
-               
+
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-       
-           <div class="col-md-12 text-center">
-                  <div
-        style="max-width: 350px; margin: 20px auto; padding: 20px; background: #fff3ed; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; font-family: Arial, sans-serif;">
 
-        <!-- Google Logo + Stars -->
-        <div style="font-size: 28px; font-weight: bold; display: flex; align-items: center; justify-content: center;">
-            <span style="color:#4285F4;">G</span>
-            <span style="color:#EA4335;">o</span>
-            <span style="color:#FBBC05;">o</span>
-            <span style="color:#4285F4;">g</span>
-            <span style="color:#34A853;">l</span>
-            <span style="color:#EA4335;">e</span>
-            &nbsp; Reviews
+        <div class="col-md-12 text-center">
+          <div
+            style="max-width: 350px; margin: 20px auto; padding: 20px; background: #fff3ed; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; font-family: Arial, sans-serif;">
+
+            <!-- Google Logo + Stars -->
+            <div
+              style="font-size: 28px; font-weight: bold; display: flex; align-items: center; justify-content: center;">
+              <span style="color:#4285F4;">G</span>
+              <span style="color:#EA4335;">o</span>
+              <span style="color:#FBBC05;">o</span>
+              <span style="color:#4285F4;">g</span>
+              <span style="color:#34A853;">l</span>
+              <span style="color:#EA4335;">e</span>
+              &nbsp; Reviews
+            </div>
+
+            <!-- Stars -->
+            <div style="margin: 8px 0; font-size: 20px; color: #f4b400;">
+              ★★★★★
+            </div>
+
+            <!-- Button -->
+            <a href="https://www.google.com/search?sca_esv=5288266b91241921&sxsrf=AE3TifMQGG2bEoufT_SZXY0aYhLTFKuiyA:1763100761287&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E9lJo78AhQsiDaMaIqFNZ9t6xnPeoraiLkoBdD1X6RT7A0sKl-gC70RZ2p5rE5fgo0L8t5zvsAvaWy3-rwnDA-XoflRDiU5hacvofIujSNcnnIa6yNeEV_wYjyO1KZYqgIs79pc%3D&q=Aaorama+Interiors+%26+Architects+%26+builders+Reviews&sa=X&ved=2ahUKEwjnsNGU_vCQAxX6wzgGHa-SA-UQ0bkNegQIIxAE&biw=1280&bih=559&dpr=1.5#lrd=0x3bcb93b0c2fe245b:0xa2fbba4bda0e01c4,3,,,,"
+              target="_blank" rel="noopener"
+              style="display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 16px; color: #00695c; text-decoration: none; border: 2px solid #00695c; padding: 8px 15px; border-radius: 8px; transition: 0.3s;">
+              <span>👉 To give us a rating, click here.</span>
+            </a>
+          </div>
+
+
         </div>
 
-        <!-- Stars -->
-        <div style="margin: 8px 0; font-size: 20px; color: #f4b400;">
-            ★★★★★
-        </div>
-
-        <!-- Button -->
-        <a href="https://www.google.com/search?sca_esv=5288266b91241921&sxsrf=AE3TifMQGG2bEoufT_SZXY0aYhLTFKuiyA:1763100761287&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E9lJo78AhQsiDaMaIqFNZ9t6xnPeoraiLkoBdD1X6RT7A0sKl-gC70RZ2p5rE5fgo0L8t5zvsAvaWy3-rwnDA-XoflRDiU5hacvofIujSNcnnIa6yNeEV_wYjyO1KZYqgIs79pc%3D&q=Aaorama+Interiors+%26+Architects+%26+builders+Reviews&sa=X&ved=2ahUKEwjnsNGU_vCQAxX6wzgGHa-SA-UQ0bkNegQIIxAE&biw=1280&bih=559&dpr=1.5#lrd=0x3bcb93b0c2fe245b:0xa2fbba4bda0e01c4,3,,,," target="_blank" rel="noopener"
-            style="display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 16px; color: #00695c; text-decoration: none; border: 2px solid #00695c; padding: 8px 15px; border-radius: 8px; transition: 0.3s;">
-            <span>👉 To give us a rating, click here.</span>
-        </a>
-    </div>
-    
-
-                </div>
-  
       </div>
     </div>
   </section>
@@ -893,18 +907,22 @@ Kudos to the architects and designers for their amazing achievements highly appr
               <hr class="line">
               <div class="row footer_3ism">
                 <h6 class="col-md-12 col-6">
-                  <a class="text-white-50" href="construction-services.html"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i>
+                  <a class="text-white-50" href="construction-services.html"><i
+                      class="fa fa-chevron-right me-1 font_12 col_brow"></i>
                     Architecture</a>
                 </h6>
                 <h6 class="col-md-12 col-6 mt-2">
-                  <a class="text-white-50" href="interior-services.html"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i> Interior
+                  <a class="text-white-50" href="interior-services.html"><i
+                      class="fa fa-chevron-right me-1 font_12 col_brow"></i> Interior
                     Design</a>
                 </h6>
                 <h6 class="col-md-12 col-6 mt-2">
-                  <a class="text-white-50" href="endtoendsolutions.html"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i> End to End Solutions</a>
+                  <a class="text-white-50" href="endtoendsolutions.html"><i
+                      class="fa fa-chevron-right me-1 font_12 col_brow"></i> End to End Solutions</a>
                 </h6>
                 <h6 class="col-md-12 col-6 mt-2">
-                  <a class="text-white-50" href="modular.html"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i> Modular</a>
+                  <a class="text-white-50" href="modular.html"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i>
+                    Modular</a>
                 </h6>
                 <!-- <h6 class="col-md-12 col-6 mt-2">
                   <a class="text-white-50" href="#"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i> Exterior
@@ -928,12 +946,12 @@ Kudos to the architects and designers for their amazing achievements highly appr
                 500019
               </p>
               <br>
-                <a class="text-white-50" href="tel:+919966911136">
-                  <i class="fa fa-phone me-1 fs-5 col_brow align-middle"></i> +91 99669 11136
-                </a> </br>
-                <a class="text-white-50" href="tel:+919573872734">
-                  <i class="fa fa-phone me-1 fs-5 col_brow align-middle"></i> +91 95738 72734
-                </a>
+              <a class="text-white-50" href="tel:+919966911136">
+                <i class="fa fa-phone me-1 fs-5 col_brow align-middle"></i> +91 99669 11136
+              </a> </br>
+              <a class="text-white-50" href="tel:+919573872734">
+                <i class="fa fa-phone me-1 fs-5 col_brow align-middle"></i> +91 95738 72734
+              </a>
               </h6>
               <h6 class="mt-3">
                 <a class="text-white-50" href="mailto:aaoramainteriorsandarchitects@gmail.com">
@@ -980,53 +998,51 @@ Kudos to the architects and designers for their amazing achievements highly appr
   </script>
 
   <!-- Chatbot Widget -->
-<div id="chatbot" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; font-family: 'Poppins', Arial, sans-serif;">
-  
-  <!-- Floating Button -->
-  <div id="chatbot-button" 
-       style="width: 60px; height: 60px; border-radius: 50%; background: #ffcc00; 
+  <div id="chatbot"
+    style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; font-family: 'Poppins', Arial, sans-serif;">
+
+    <!-- Floating Button -->
+    <div id="chatbot-button" style="width: 60px; height: 60px; border-radius: 50%; background: #ffcc00; 
               display:flex; justify-content:center; align-items:center; cursor:pointer; 
               box-shadow:0px 4px 12px rgba(0,0,0,0.3);">
-    🤖
-  </div>
+      🤖
+    </div>
 
-  <!-- Chat Window -->
-  <div id="chat-window" 
-       style="width: 350px; background:white; border-radius:20px; padding:20px; 
+    <!-- Chat Window -->
+    <div id="chat-window" style="width: 350px; background:white; border-radius:20px; padding:20px; 
               margin-top:10px; display:none; box-shadow:0px 6px 18px rgba(0,0,0,0.25); position:relative;">
 
       <!-- Close Button -->
-      <div id="close-chat"
-           style="position:absolute; right:15px; top:10px; font-size:20px; cursor:pointer; color:#444;">
+      <div id="close-chat" style="position:absolute; right:15px; top:10px; font-size:20px; cursor:pointer; color:#444;">
         ✖
       </div>
 
       <!-- Greeting -->
-     <div style="display:flex; flex-direction:column; align-items:flex-start; margin-bottom:10px;">
-    
-    <div style="display:flex; flex-direction:column; align-items:flex-start; margin-bottom:10px;">
+      <div style="display:flex; flex-direction:column; align-items:flex-start; margin-bottom:10px;">
 
-    <!-- Emoji TOP-LEFT -->
-    <div style="font-size:100px; line-height:1; text-align:right;">👋</div>
+        <div style="display:flex; flex-direction:column; align-items:flex-start; margin-bottom:10px;">
 
-    <!-- Text BELOW -->
-    <div style="text-align:left; margin-top:10px;">
-        <div style="font-size:25px; font-weight:600;">Welcome</div>
-        <div style="font-size:15px; font-weight:500;">Aaorama Interiors & Architects!!</div>
-    </div>
+          <!-- Emoji TOP-LEFT -->
+          <div style="font-size:100px; line-height:1; text-align:right;">👋</div>
 
-</div>
+          <!-- Text BELOW -->
+          <div style="text-align:left; margin-top:10px;">
+            <div style="font-size:25px; font-weight:600;">Welcome</div>
+            <div style="font-size:15px; font-weight:500;">Aaorama Interiors & Architects!!</div>
+          </div>
+
+        </div>
 
 
-    
-</div>
+
+      </div>
 
 
 
 
 
       <h3 style="margin-top:5px; font-size:18px; font-weight:600;">
-         The Most Reliable Brand for Home Interiors in India 🎉
+        The Most Reliable Brand for Home Interiors in India 🎉
       </h3>
 
       <p style="font-size:14px; margin-top:10px;">
@@ -1036,15 +1052,13 @@ Kudos to the architects and designers for their amazing achievements highly appr
       <!-- Buttons -->
       <div style="margin-top:20px;">
 
-        <button 
-                style="width:100%; padding:12px; margin-top:10px; border:none; 
+        <button style="width:100%; padding:12px; margin-top:10px; border:none; 
                        background:white; border-radius:30px; font-size:15px; 
                        box-shadow:0 0 8px rgba(0,0,0,0.15); cursor:pointer;">
           Request a Design Consultation
         </button>
 
-        <button 
-                style="width:100%; padding:12px; margin-top:10px; border:none; 
+        <button style="width:100%; padding:12px; margin-top:10px; border:none; 
                        background:white; border-radius:30px; font-size:15px;
                        box-shadow:0 0 8px rgba(0,0,0,0.15); cursor:pointer; color:#ff9800; font-weight:600;">
           Estimate Interior Cost
@@ -1055,32 +1069,32 @@ Kudos to the architects and designers for their amazing achievements highly appr
       <!-- Profile Photo -->
       <!-- <img src="https://i.ibb.co/fpQ9h2S/usergirl.png" 
            style="width:50px; height:50px; border-radius:50%; position:absolute; bottom:-25px; right:20px; box-shadow:0 2px 10px rgba(0,0,0,0.3);"> -->
+    </div>
   </div>
-</div>
 
-<script>
-  const chatWindow = document.getElementById("chat-window");
-  const chatButton = document.getElementById("chatbot-button");
-  const closeChat = document.getElementById("close-chat");
+  <script>
+    const chatWindow = document.getElementById("chat-window");
+    const chatButton = document.getElementById("chatbot-button");
+    const closeChat = document.getElementById("close-chat");
 
-  // Open the chatbot
-  chatButton.onclick = () => {
-    chatWindow.style.display = "block";
-  };
+    // Open the chatbot
+    chatButton.onclick = () => {
+      chatWindow.style.display = "block";
+    };
 
-  // Close when click X
-  closeChat.onclick = () => {
-    chatWindow.style.display = "none";
-  };
-
-  // Close when clicking outside chatbot
-  document.addEventListener("click", function (event) {
-    const isClickInside = chatWindow.contains(event.target) || chatButton.contains(event.target);
-    if (!isClickInside) {
+    // Close when click X
+    closeChat.onclick = () => {
       chatWindow.style.display = "none";
-    }
-  });
-</script>
+    };
+
+    // Close when clicking outside chatbot
+    document.addEventListener("click", function (event) {
+      const isClickInside = chatWindow.contains(event.target) || chatButton.contains(event.target);
+      if (!isClickInside) {
+        chatWindow.style.display = "none";
+      }
+    });
+  </script>
 
 
 </body>
