@@ -17,6 +17,46 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<link rel="stylesheet" href="lightbox/css/lightbox.min.css">
 
+	<style>
+		.popup1 {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup1-content {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.popup1-content a {
+  display: block;
+  margin: 10px 0;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.popup1-content button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+	</style>
+
 </head>
 
 <body>
@@ -388,12 +428,64 @@
 								elegant, durable, and functional spaces that stand the test of time.
 							</p>
 
-							<ul class="social-network social-circle mb-0">
-								<li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook"></i></a></li>
-								<li><a href="#" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" class="icoLinkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-							</ul>
+							<!-- Social Icons -->
+<ul class="social-network social-circle mb-0">
+
+    <!-- Facebook -->
+    <li>
+      <a href="#" onclick="openPopup('facebookPopup')" class="icoFacebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </li>
+
+    <!-- Instagram -->
+    <li>
+      <a href="#" onclick="openPopup('instagramPopup')" class="icoInstagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+
+    <!-- YouTube (direct link) -->
+    <li>
+      <a href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow" 
+         class="icoYoutube" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+
+    <!-- LinkedIn (direct link) -->
+    <li>
+      <a href="https://www.linkedin.com/company/aaoramainteriors/" 
+         class="icoLinkedin" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+
+</ul>
+
+
+<!-- FACEBOOK POPUP -->
+<div id="facebookPopup" class="popup1">
+  <div class="popup1-content">
+      <h4>Select Facebook Account</h4>
+      <a href="https://www.facebook.com/share/1KLHqahhRM/?mibextid=wwXIfr" target="_blank">Interior</a>
+      <a href="https://www.facebook.com/share/17T7Vr1od7/?mibextid=wwXIfr" target="_blank">Construction</a>
+      <button onclick="closePopup('facebookPopup')">Close</button>
+  </div>
+</div>
+
+<!-- INSTAGRAM POPUP -->
+<div id="instagramPopup" class="popup1">
+  <div class="popup1-content">
+      <h4>Select Instagram Account</h4>
+      <a href="https://www.instagram.com/aaorama.interiors" target="_blank">Interior</a>
+      <a href="https://www.instagram.com/aaorama.constructions" target="_blank">Construction</a>
+      <button onclick="closePopup('instagramPopup')">Close</button>
+  </div>
+</div>
+
+ 
+
 						</div>
 					</div>
 
@@ -465,7 +557,16 @@
 			</div>
 		</div>
 	</section>
+<script>
+  function openPopup(id) {
+  document.getElementById(id).style.display = "flex";
+}
 
+function closePopup(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+</script>
 	<script>
 		window.onscroll = function () { myFunction() };
 		var navbar_sticky = document.getElementById("navbar_sticky");
