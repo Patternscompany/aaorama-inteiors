@@ -557,12 +557,63 @@ padding-top:5px;
 								elegant, durable, and functional spaces that stand the test of time.
 							</p>
 
-							<ul class="social-network social-circle mb-0">
-								<li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook"></i></a></li>
-								<li><a href="#" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#" class="icoLinkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-							</ul>
+							<!-- Social Icons -->
+<ul class="social-network social-circle mb-0">
+    <li><a href="#" onclick="openPopup('facebookPopup')" class="icoFacebook"><i class="fab fa-facebook"></i></a></li>
+    <li><a href="#" onclick="openPopup('instagramPopup')" class="icoInstagram"><i class="fab fa-instagram"></i></a></li>
+    <li>
+  <a href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow" 
+     class="icoYoutube" 
+     title="YouTube" 
+     target="_blank">
+    <i class="fab fa-youtube"></i>
+  </a>
+</li>
+
+    <li><a href="https://www.linkedin.com/company/aaoramainteriors/" onclick="openPopup('linkedinPopup')" class="icoLinkedin"><i class="fab fa-linkedin"></i></a></li>
+</ul>
+
+<!-- POPUP: FACEBOOK -->
+<div id="facebookPopup" class="popup1">
+  <div class="popup1-content">
+      <h4>Select Facebook Account</h4>
+      <a href="https://www.facebook.com/share/1KLHqahhRM/?mibextid=wwXIfr" target="_blank">Interior</a>
+      <a href="https://www.facebook.com/share/17T7Vr1od7/?mibextid=wwXIfr" target="_blank">construction</a>
+      <button onclick="closePopup('facebookPopup')">Close</button>
+  </div>
+</div>
+
+<!-- POPUP: INSTAGRAM -->
+<div id="instagramPopup" class="popup1">
+  <div class="popup1-content">
+      <h4>Select Instagram Account</h4>
+      <a href="https://www.instagram.com/aaorama.interiors?igsh=MWo1eWVsMjBuYm45MQ==" target="_blank">Interior</a>
+      <a href="https://www.instagram.com/aaorama.constructions?igsh=MWxraDdlNm1nNWI5NA==" target="_blank">construction</a>
+      <button onclick="closePopup('instagramPopup')">Close</button>
+  </div>
+</div>
+
+<!-- POPUP: Youtube -->
+<li>
+  <a href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow" 
+     class="icoYoutube" 
+     title="YouTube" 
+     target="_blank">
+    <i class="fab fa-youtube"></i>
+  </a>
+</li>
+
+
+<!-- POPUP: LINKEDIN -->
+<li>
+  <a href="https://www.linkedin.com/company/aaoramainteriors/" 
+     class="icoLinkedin" 
+     title="LinkedIn" 
+     target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+</li>
+
 						</div>
 					</div>
 
@@ -634,7 +685,16 @@ padding-top:5px;
 			</div>
 		</div>
 	</section>
+<script>
+  function openPopup(id) {
+  document.getElementById(id).style.display = "flex";
+}
 
+function closePopup(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+</script>
 
   <script>
     window.onscroll = function () { myFunction() };
