@@ -14,9 +14,139 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <script src="js/bootstrap.bundle.min.js"></script>
   <link rel="icon" href="img/aaorama.jpg" type="image/x-icon">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
+  <style>
+    /* social list */
+    .social-network {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .social-network li {
+      display: inline-block;
+    }
+
+    /* base icon styles (circle background for icons) */
+    .social-network a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .social-network i {
+      font-size: 18px;
+    }
+
+    /* each social item that has a hover menu */
+    .social-item {
+      position: relative;
+    }
+
+    /* hover-options box */
+    .hover-options {
+      position: absolute;
+      top: -72px;
+      /* above the icon */
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      background: transparent;
+      /* keep transparent so only circular images show */
+      border-radius: 10px;
+      pointer-events: none;
+      /* disabled by default to avoid accidental clicks when hidden */
+      opacity: 0;
+      transition: opacity .16s ease, transform .16s ease;
+      transform-origin: bottom center;
+      z-index: 999;
+      user-select: none;
+    }
+
+    /* when visible (desktop hover or js toggle) */
+    .hover-options.show {
+      pointer-events: auto;
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+
+    /* circle image buttons inside hover options */
+    .hover-options .option {
+      display: inline-flex;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      background: #fff;
+      border: 4px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .hover-options .option img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* small label below the circular image (optional) */
+    .hover-options .option span {
+      display: block;
+      font-size: 11px;
+      margin-top: 4px;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* show on desktop hover */
+    @media (hover: hover) and (pointer: fine) {
+      .social-item:hover .hover-options {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) scale(1);
+      }
+    }
+
+    /* mobile friendly - bring hover options slightly bigger */
+    @media (max-width:600px) {
+      .hover-options {
+        top: -86px;
+        gap: 12px;
+      }
+
+      .hover-options .option {
+        width: 54px;
+        height: 54px;
+      }
+
+      .social-network a {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    /* For demonstration style (so things are visible on dark bg) */
+    .demo-footer {
+      margin-top: 120px;
+      color: #bbb;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
@@ -56,34 +186,35 @@
         <div class="col-md-4">
           <div class="top_1r text-end">
             <ul class="mb-0">
-    <!-- Facebook -->
-    <li class="d-inline-block mx-2">
-        <a class="text-white" href="https://www.facebook.com/share/1KLHqahhRM/?mibextid=wwXIfr" target="_blank">
-            <i class="fab fa-facebook"></i>
-        </a>
-    </li>
+              <!-- Facebook -->
+              <li class="d-inline-block mx-2">
+                <a class="text-white" href="https://www.facebook.com/share/1KLHqahhRM/?mibextid=wwXIfr" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
 
-    <!-- Instagram -->
-    <li class="d-inline-block mx-2">
-        <a class="text-white" href="https://www.instagram.com/aaorama.interiors" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </li>
+              <!-- Instagram -->
+              <li class="d-inline-block mx-2">
+                <a class="text-white" href="https://www.instagram.com/aaorama.interiors" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
 
-    <!-- YouTube -->
-    <li class="d-inline-block mx-2">
-        <a class="text-white" href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a>
-    </li>
+              <!-- YouTube -->
+              <li class="d-inline-block mx-2">
+                <a class="text-white" href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow"
+                  target="_blank">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
 
-    <!-- LinkedIn -->
-    <li class="d-inline-block mx-2">
-        <a class="text-white" href="https://www.linkedin.com/company/aaoramainteriors/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </li>
-</ul>
+              <!-- LinkedIn -->
+              <li class="d-inline-block mx-2">
+                <a class="text-white" href="https://www.linkedin.com/company/aaoramainteriors/" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
 
           </div>
         </div>
@@ -916,43 +1047,72 @@
                 create
                 elegant, durable, and functional spaces that stand the test of time.
               </p>
-             <!-- Social Icons -->
-<ul class="social-network social-circle mb-0">
-    <li><a href="#" onclick="openPopup('facebookPopup')" class="icoFacebook"><i class="fab fa-facebook"></i></a></li>
-    <li><a href="#" onclick="openPopup('instagramPopup')" class="icoInstagram"><i class="fab fa-instagram"></i></a></li>
-    <li>
-  <a href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow" 
-     class="icoYoutube" 
-     title="YouTube" 
-     target="_blank">
-    <i class="fab fa-youtube"></i>
-  </a>
-</li>
+              <!-- Social Icons -->
+              <div class="container">
+                <ul class="social-network social-circle mb-0">
+                  <!-- FACEBOOK -->
+                  <li class="social-item" data-social="facebook">
+                    <a href="javascript:void(0)" class="icoFacebook" aria-label="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
 
-    <li><a href="https://www.linkedin.com/company/aaoramainteriors/" onclick="openPopup('linkedinPopup')" class="icoLinkedin"><i class="fab fa-linkedin"></i></a></li>
-</ul>
+                    <!-- Hover / Touch Options: circular images -->
+                    <div class="hover-options" aria-hidden="true">
+                      <!-- Replace src with your interior.png -->
+                      <a class="option" href="https://www.facebook.com/share/1KLHqahhRM/?mibextid=wwXIfr"
+                        target="_blank" rel="noopener noreferrer" title="Interior">
+                        <img src="img/interiors/i6.png" alt="Interior">
+                      </a>
 
-<!-- POPUP: FACEBOOK -->
-<div id="facebookPopup" class="popup1">
-  <div class="popup1-content">
-      <h4>Select Facebook Account</h4>
-      <a href="https://www.facebook.com/share/1KLHqahhRM/?mibextid=wwXIfr" target="_blank">Interior</a>
-      <a href="https://www.facebook.com/share/17T7Vr1od7/?mibextid=wwXIfr" target="_blank">construction</a>
-      <button onclick="closePopup('facebookPopup')">Close</button>
-  </div>
-</div>
+                      <!-- Replace src with your construction.png -->
+                      <a class="option" href="https://www.facebook.com/share/17T7Vr1od7/?mibextid=wwXIfr"
+                        target="_blank" rel="noopener noreferrer" title="Construction">
+                        <img src="img/2.png" alt="Construction">
+                      </a>
+                    </div>
+                  </li>
 
-<!-- POPUP: INSTAGRAM -->
-<div id="instagramPopup" class="popup1">
-  <div class="popup1-content">
-      <h4>Select Instagram Account</h4>
-      <a href="https://www.instagram.com/aaorama.interiors?igsh=MWo1eWVsMjBuYm45MQ==" target="_blank">Interior</a>
-      <a href="https://www.instagram.com/aaorama.constructions?igsh=MWxraDdlNm1nNWI5NA==" target="_blank">construction</a>
-      <button onclick="closePopup('instagramPopup')">Close</button>
-  </div>
-</div>
+                  <!-- INSTAGRAM -->
+                  <li class="social-item" data-social="instagram">
+                    <a href="javascript:void(0)" class="icoInstagram" aria-label="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
 
- 
+                    <div class="hover-options" aria-hidden="true">
+                      <a class="option" href="https://www.instagram.com/aaorama.interiors?igsh=MWo1eWVsMjBuYm45MQ=="
+                        target="_blank" rel="noopener noreferrer" title="Interior">
+                        <img src="img/interiors/i6.png" alt="Interior">
+                      </a>
+
+                      <a class="option" href="https://www.instagram.com/aaorama.constructions?igsh=MWxraDdlNm1nNWI5NA=="
+                        target="_blank" rel="noopener noreferrer" title="Construction">
+                        <img src="img/2.png" alt="Construction">
+                      </a>
+                    </div>
+                  </li>
+
+                  <!-- YOUTUBE  -->
+                  <li>
+                    <a href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow" class="icoYoutube"
+                      title="YouTube" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                  </li>
+
+                  <!-- LINKEDIN  -->
+                  <li>
+                    <a href="https://www.linkedin.com/company/aaoramainteriors/" class="icoLinkedin" target="_blank"
+                      rel="noopener noreferrer">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+
+
+              </div>
+
+
+
 
 
             </div>
@@ -1038,16 +1198,86 @@
     </div>
   </section>
 
-<script>
+  <script>
+    // Toggle behavior on touch / small screens:
+    // - On touch devices or narrow screens, tapping the icon toggles the options.
+    // - If options are open and user taps outside, close them.
+
+    (function () {
+      const MOBILE_BREAKPOINT = 800; // px; adjust if needed
+      const socialItems = document.querySelectorAll('.social-item');
+
+      // Helper: close all
+      function closeAll() {
+        document.querySelectorAll('.hover-options').forEach(el => {
+          el.classList.remove('show');
+          el.setAttribute('aria-hidden', 'true');
+        });
+        document.body.removeEventListener('click', bodyClickHandler);
+      }
+
+      // Body click handler to close when clicking outside
+      function bodyClickHandler(e) {
+        // if click is inside a .social-item, do nothing
+        if (e.target.closest('.social-item')) return;
+        closeAll();
+      }
+
+      function isMobileView() {
+        return window.innerWidth <= MOBILE_BREAKPOINT || ('ontouchstart' in window && window.innerWidth <= 1000);
+      }
+
+      socialItems.forEach(item => {
+        const icon = item.querySelector('a');
+        const menu = item.querySelector('.hover-options');
+
+        // Ensure link not navigating to top (we used javascript:void(0) already)
+        icon.addEventListener('click', function (e) {
+          if (isMobileView()) {
+            e.preventDefault();
+            // Toggle this menu
+            const visible = menu.classList.contains('show');
+            closeAll(); // close others
+            if (!visible) {
+              menu.classList.add('show');
+              menu.setAttribute('aria-hidden', 'false');
+              // add outside click listener
+              setTimeout(() => {
+                document.body.addEventListener('click', bodyClickHandler);
+              }, 0);
+            } else {
+              closeAll();
+            }
+          } else {
+            // On desktop clicks, do nothing (hover will handle it). Prevent accidental focus scroll.
+            e.preventDefault();
+          }
+        });
+
+        // Also close menu when any option is clicked (on mobile)
+        menu.querySelectorAll('a').forEach(opt => {
+          opt.addEventListener('click', () => {
+            closeAll();
+          });
+        });
+      });
+
+      // Close menus on resize if necessary
+      window.addEventListener('resize', () => {
+        if (!isMobileView()) closeAll();
+      });
+    })();
+  </script>
+  <!-- <script>
   function openPopup(id) {
   document.getElementById(id).style.display = "flex";
-}
+} -->
 
-function closePopup(id) {
+  function closePopup(id) {
   document.getElementById(id).style.display = "none";
-}
+  }
 
-</script>
+  </script>
   <script>
     window.onscroll = function () { myFunction() };
     var navbar_sticky = document.getElementById("navbar_sticky");
@@ -1065,24 +1295,22 @@ function closePopup(id) {
   </script>
 
   <!-- Chatbot Floating Button -->
-<div id="chatbot-btn"
-     style="position: fixed; bottom: 30px; left: 30px; width: 65px; height: 65px; 
+  <div id="chatbot-btn" style="position: fixed; bottom: 30px; left: 30px; width: 65px; height: 65px; 
             background:#FFCC00; border-radius:50%; display:flex; justify-content:center; 
             align-items:center; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.25);
             font-size:30px; z-index:9999;">
     🤖
-</div>
+  </div>
 
-<!-- Chatbot Box -->
-<div id="chatbot-box" 
-     style="position: fixed; bottom: 110px; left: 30px; width: 360px; 
+  <!-- Chatbot Box -->
+  <div id="chatbot-box" style="position: fixed; bottom: 110px; left: 30px; width: 360px; 
             background:white; border-radius:20px; padding:25px; display:none;
             box-shadow:0 8px 20px rgba(0,0,0,0.20); z-index:9999;">
 
     <!-- Close Button -->
-    <div id="chatbot-close" 
-         style="position:absolute; top:15px; right:18px; cursor:pointer; font-size:22px; color:#444;">
-         ✖
+    <div id="chatbot-close"
+      style="position:absolute; top:15px; right:18px; cursor:pointer; font-size:22px; color:#444;">
+      ✖
     </div>
 
     <!-- Hand Emoji -->
@@ -1091,46 +1319,44 @@ function closePopup(id) {
     <!-- Welcome Text -->
     <h2 style="margin:0; font-size:22px; font-weight:700;">Welcome</h2>
     <p style="margin:0; font-size:16px; font-weight:500; color:#555;">
-        Aaorama Interiors & Architects!!
+      Aaorama Interiors & Architects!!
     </p>
 
     <p style="margin-top:10px; font-size:14px; color:#666; line-height:1.4;">
-        The Most Reliable Brand for Home Interiors in India 🎉  
-        <br><br>
-        I'm <b>Mounika</b>. I'm here to assist you.
+      The Most Reliable Brand for Home Interiors in India 🎉
+      <br><br>
+      I'm <b>Mounika</b>. I'm here to assist you.
     </p>
 
     <!-- Button 1 -->
-    <a href="contact.html" 
-       style="display:block; text-decoration:none; width:100%; padding:12px; text-align:center;
+    <a href="contact.html" style="display:block; text-decoration:none; width:100%; padding:12px; text-align:center;
               background:#ffffff; border-radius:30px; border:2px solid #eee; margin-top:20px;
               font-weight:600; font-size:15px; color:#333;">
-        Request a Design Consultation
+      Request a Design Consultation
     </a>
 
     <!-- Button 2 -->
-    <a href="modular.html"
-       style="display:block; text-decoration:none; width:100%; padding:12px; text-align:center;
+    <a href="modular.html" style="display:block; text-decoration:none; width:100%; padding:12px; text-align:center;
               background:#FFE6D3; border-radius:30px; margin-top:12px;
               font-weight:600; font-size:15px; color:#D66A1F;">
-        Estimate Interior Cost
+      Estimate Interior Cost
     </a>
 
-</div>
+  </div>
 
-<script>
-  const chatBtn = document.getElementById("chatbot-btn");
-  const chatBox = document.getElementById("chatbot-box");
-  const chatClose = document.getElementById("chatbot-close");
+  <script>
+    const chatBtn = document.getElementById("chatbot-btn");
+    const chatBox = document.getElementById("chatbot-box");
+    const chatClose = document.getElementById("chatbot-close");
 
-  chatBtn.addEventListener("click", () => {
+    chatBtn.addEventListener("click", () => {
       chatBox.style.display = "block";
-  });
+    });
 
-  chatClose.addEventListener("click", () => {
+    chatClose.addEventListener("click", () => {
       chatBox.style.display = "none";
-  });
-</script>
+    });
+  </script>
 
 
 

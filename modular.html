@@ -14,9 +14,138 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <script src="js/bootstrap.bundle.min.js"></script>
   <link rel="icon" href="img/aaorama.jpg" type="image/x-icon">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <style>
+    /* social list */
+    .social-network {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
 
+    .social-network li {
+      display: inline-block;
+    }
+
+    /* base icon styles (circle background for icons) */
+    .social-network a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .social-network i {
+      font-size: 18px;
+    }
+
+    /* each social item that has a hover menu */
+    .social-item {
+      position: relative;
+    }
+
+    /* hover-options box */
+    .hover-options {
+      position: absolute;
+      top: -72px;
+      /* above the icon */
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      background: transparent;
+      /* keep transparent so only circular images show */
+      border-radius: 10px;
+      pointer-events: none;
+      /* disabled by default to avoid accidental clicks when hidden */
+      opacity: 0;
+      transition: opacity .16s ease, transform .16s ease;
+      transform-origin: bottom center;
+      z-index: 999;
+      user-select: none;
+    }
+
+    /* when visible (desktop hover or js toggle) */
+    .hover-options.show {
+      pointer-events: auto;
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+
+    /* circle image buttons inside hover options */
+    .hover-options .option {
+      display: inline-flex;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      background: #fff;
+      border: 4px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .hover-options .option img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* small label below the circular image (optional) */
+    .hover-options .option span {
+      display: block;
+      font-size: 11px;
+      margin-top: 4px;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* show on desktop hover */
+    @media (hover: hover) and (pointer: fine) {
+      .social-item:hover .hover-options {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) scale(1);
+      }
+    }
+
+    /* mobile friendly - bring hover options slightly bigger */
+    @media (max-width:600px) {
+      .hover-options {
+        top: -86px;
+        gap: 12px;
+      }
+
+      .hover-options .option {
+        width: 54px;
+        height: 54px;
+      }
+
+      .social-network a {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    /* For demonstration style (so things are visible on dark bg) */
+    .demo-footer {
+      margin-top: 120px;
+      color: #bbb;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
@@ -55,34 +184,35 @@
         <div class="col-md-4">
           <div class="top_1r text-end">
             <ul class="mb-0">
-    <!-- Facebook -->
-    <li class="d-inline-block mx-2">
-        <a class="text-white" href="https://www.facebook.com/share/1KLHqahhRM/?mibextid=wwXIfr" target="_blank">
-            <i class="fab fa-facebook"></i>
-        </a>
-    </li>
+              <!-- Facebook -->
+              <li class="d-inline-block mx-2">
+                <a class="text-white" href="https://www.facebook.com/share/1KLHqahhRM/?mibextid=wwXIfr" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
 
-    <!-- Instagram -->
-    <li class="d-inline-block mx-2">
-        <a class="text-white" href="https://www.instagram.com/aaorama.interiors" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </li>
+              <!-- Instagram -->
+              <li class="d-inline-block mx-2">
+                <a class="text-white" href="https://www.instagram.com/aaorama.interiors" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
 
-    <!-- YouTube -->
-    <li class="d-inline-block mx-2">
-        <a class="text-white" href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a>
-    </li>
+              <!-- YouTube -->
+              <li class="d-inline-block mx-2">
+                <a class="text-white" href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow"
+                  target="_blank">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
 
-    <!-- LinkedIn -->
-    <li class="d-inline-block mx-2">
-        <a class="text-white" href="https://www.linkedin.com/company/aaoramainteriors/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </li>
-</ul>
+              <!-- LinkedIn -->
+              <li class="d-inline-block mx-2">
+                <a class="text-white" href="https://www.linkedin.com/company/aaoramainteriors/" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
 
           </div>
         </div>
@@ -141,13 +271,13 @@
 
                 <li><a class="dropdown-item" href="architects-services.html"><i
                       class="fa fa-long-arrow-right font_14 me-1 align-middle"></i>Architectural Services</a></li>
-                      <li><a class="dropdown-item" href="interior-services.html"><i
+                <li><a class="dropdown-item" href="interior-services.html"><i
                       class="fa fa-long-arrow-right font_14 me-1 align-middle"></i>Interior Services</a></li>
-                      
-                      <li><a class="dropdown-item" href="endtoendsolutions.html"><i
+
+                <li><a class="dropdown-item" href="endtoendsolutions.html"><i
                       class="fa fa-long-arrow-right font_14 me-1 align-middle"></i>End to End Solutions</a></li>
 
-                      <li><a class="dropdown-item" href="modular.html"><i
+                <li><a class="dropdown-item" href="modular.html"><i
                       class="fa fa-long-arrow-right font_14 me-1 align-middle"></i>Modular</a></li>
 
               </ul>
@@ -178,7 +308,7 @@
             </li>
 
             <li class="nav-item drop_conc">
-                <a class="button" href="#">Get a Free Quote</a>
+              <a class="button" href="#">Get a Free Quote</a>
             </li>
 
           </ul>
@@ -192,19 +322,19 @@
       <div class="container-xl">
         <div class="row top_1">
           <div class="col-md-7">
-           <div class="center_hl">
-  <h1 class="text-dark font_60">
-    Transform Your Home With Our Modern <span class="col_brow">Modular Kitchen</span> Solutions
-  </h1>
-  <p class="mt-4 text-dark">
-    We design stylish, functional, and space-efficient modular kitchens that perfectly match your
-    lifestyle. From layouts to finishes, every element is crafted with precision, durability,
-    and a touch of elegance.
-  </p>
-  <h6 class="mb-0 mt-4 text-uppercase font_14">
-    <a class="button" href="#">Get a Free Design Consultation</a>
-  </h6>
-</div>
+            <div class="center_hl">
+              <h1 class="text-dark font_60">
+                Transform Your Home With Our Modern <span class="col_brow">Modular Kitchen</span> Solutions
+              </h1>
+              <p class="mt-4 text-dark">
+                We design stylish, functional, and space-efficient modular kitchens that perfectly match your
+                lifestyle. From layouts to finishes, every element is crafted with precision, durability,
+                and a touch of elegance.
+              </p>
+              <h6 class="mb-0 mt-4 text-uppercase font_14">
+                <a class="button" href="#">Get a Free Design Consultation</a>
+              </h6>
+            </div>
 
 
 
@@ -214,8 +344,7 @@
             <div class="center_hr">
               <div class="grid clearfix">
                 <figure class="effect-jazz mb-0">
-                  <a href="#"><img src="img/1.png" height="400" class="w-100"
-                      alt="Construction Services"></a>
+                  <a href="#"><img src="img/1.png" height="400" class="w-100" alt="Construction Services"></a>
                 </figure>
               </div>
             </div>
@@ -225,59 +354,64 @@
     </div>
   </section>
 
-<style>
-  .center_hm {
-    background: white;
-    padding-top: 40px;
-    padding-bottom:40px;
+  <style>
+    .center_hm {
+      background: white;
+      padding-top: 40px;
+      padding-bottom: 40px;
 
-  }
-  .button{
-    background-color: #dc783d;
-    color: #fff !important;
-  }
-  .center_hl{
-padding-top:5px;
-  }
+    }
 
-</style>
- <section id="arch-about" class="bg-light p_3">
-  <div class="container-xl">
-    <div class="row work_2 mt-4">
-      <!-- Left Image -->
-      <div class="col-md-6">
-        <div class="work_2l">
-          <div class="grid clearfix">
-            <figure class="effect-jazz mb-0">
-              <a href="#"><img src="img/2.png" class="w-100" alt="Architectural Planning"></a>
-            </figure>
+    .button {
+      background-color: #dc783d;
+      color: #fff !important;
+    }
+
+    .center_hl {
+      padding-top: 5px;
+    }
+  </style>
+  <section id="arch-about" class="bg-light p_3">
+    <div class="container-xl">
+      <div class="row work_2 mt-4">
+        <!-- Left Image -->
+        <div class="col-md-6">
+          <div class="work_2l">
+            <div class="grid clearfix">
+              <figure class="effect-jazz mb-0">
+                <a href="#"><img src="img/2.png" class="w-100" alt="Architectural Planning"></a>
+              </figure>
+            </div>
           </div>
         </div>
+
+        <!-- Right Text -->
+        <div class="col-md-6">
+          <div class="work_2r">
+            <h1 class="mt-3">
+              Modern <span class="col_brow">Modular Kitchen Designs</span> Built for Comfort & Style
+            </h1>
+            <p class="mt-3">
+              At Aaorama Interiors & Architects, we craft modular kitchens that perfectly balance elegance,
+              functionality, and durability. From space planning to premium finishes, our expert team ensures
+              every kitchen is designed to enhance your cooking experience with smart layouts and modern aesthetics.
+            </p>
+
+            <h6 class="mt-4 fw-bold">Space Optimization</h6>
+            <div class="progress-bar mt-3">
+              <div class="progress" style="width:95%;"></div>
+            </div>
+
+            <h6 class="mt-4 fw-bold">Custom Design & Finishes</h6>
+            <div class="progress-bar mt-3">
+              <div class="progress" style="width:90%;"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <!-- Right Text -->
-     <div class="col-md-6">
-  <div class="work_2r">
-    <h1 class="mt-3">
-      Modern <span class="col_brow">Modular Kitchen Designs</span> Built for Comfort & Style
-    </h1>
-    <p class="mt-3">
-      At Aaorama Interiors & Architects, we craft modular kitchens that perfectly balance elegance,
-      functionality, and durability. From space planning to premium finishes, our expert team ensures
-      every kitchen is designed to enhance your cooking experience with smart layouts and modern aesthetics.
-    </p>
-
-    <h6 class="mt-4 fw-bold">Space Optimization</h6>
-    <div class="progress-bar mt-3"><div class="progress" style="width:95%;"></div></div>
-
-    <h6 class="mt-4 fw-bold">Custom Design & Finishes</h6>
-    <div class="progress-bar mt-3"><div class="progress" style="width:90%;"></div></div>
-  </div>
-</div>
-
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -287,175 +421,178 @@ padding-top:5px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3);
     }
   </style>
-<section id="arch-special" class="p_5 bg_dark">
-  <div class="container-xl">
+  <section id="arch-special" class="p_5 bg_dark">
+    <div class="container-xl">
 
-    <h1 class="text-center text-white mb-5">
-      Our <span class="col_brow">Modular Kitchen</span> Specializations
-    </h1>
+      <h1 class="text-center text-white mb-5">
+        Our <span class="col_brow">Modular Kitchen</span> Specializations
+      </h1>
 
-    <div class="row offer_li mt-4">
+      <div class="row offer_li mt-4">
 
-      <!-- Modular Kitchen Planning -->
-      <div class="col-md-4">
-        <div class="offer_lil text-center">
-          <span class="font_60 col_brow">
-            <i class="fa-solid fa-layer-group"></i>
-          </span>
-          <h5 class="mt-3 text-white">Kitchen Layout Planning</h5>
-          <p class="text-white-50">
-            Smart and efficient layout plans designed to make cooking easier and maximize your space.
-          </p>
-        </div>
-      </div>
-
-      <!-- Modular Cabinets -->
-      <div class="col-md-4">
-        <div class="offer_lil text-center">
-          <span class="font_60 col_brow">
-            <i class="fa-solid fa-kitchen-set"></i>
-          </span>
-          <h5 class="mt-3 text-white">Modular Cabinets</h5>
-          <p class="text-white-50">
-            Premium quality modular cabinets with durable materials, smooth finishes, and soft-close fittings.
-          </p>
-        </div>
-      </div>
-
-      <!-- Countertops & Finishes -->
-      <div class="col-md-4">
-        <div class="offer_lil text-center">
-          <span class="font_60 col_brow">
-            <i class="fa-solid fa-brush"></i>
-          </span>
-          <h5 class="mt-3 text-white">Countertops & Finishes</h5>
-          <p class="text-white-50">
-            High-quality granite, quartz, and laminate finishes that combine beauty with long-lasting strength.
-          </p>
-        </div>
-      </div>
-
-      <!-- Storage Optimization -->
-      <div class="col-md-4 mt-4">
-        <div class="offer_lil text-center">
-          <span class="font_60 col_brow">
-            <i class="fa-solid fa-box-open"></i>
-          </span>
-          <h5 class="mt-3 text-white">Storage Optimization</h5>
-          <p class="text-white-50">
-            Customized storage units, tall units, and organizers designed for maximum convenience.
-          </p>
-        </div>
-      </div>
-
-      <!-- Lighting Solutions -->
-      <div class="col-md-4 mt-4">
-        <div class="offer_lil text-center">
-          <span class="font_60 col_brow">
-            <i class="fa-solid fa-lightbulb"></i>
-          </span>
-          <h5 class="mt-3 text-white">Lighting Solutions</h5>
-          <p class="text-white-50">
-            Ambient, task, and under-cabinet lighting to enhance visibility and elevate kitchen aesthetics.
-          </p>
-        </div>
-      </div>
-
-      <!-- Appliance Integration -->
-      <div class="col-md-4 mt-4">
-        <div class="offer_lil text-center">
-          <span class="font_60 col_brow">
-            <i class="fa-solid fa-plug-circle-bolt"></i>
-          </span>
-          <h5 class="mt-3 text-white">Appliance Integration</h5>
-          <p class="text-white-50">
-            Seamless integration of chimneys, hobs, ovens, refrigerators, and other kitchen appliances.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<section id="arch-choose" class="p_5 bg_dark_o">
-  <div class="container-xl">
-    <div class="row">
-      <div class="col-md-6">
-        <h1 class="text-white">
-          Why Choose <span class="col_brow">Aaorama Modular Kitchen</span> Services?
-        </h1>
-        <p class="mt-3 text-white-50">
-          We design modular kitchens that combine style, durability, and maximum space efficiency.
-          Every kitchen is crafted with premium materials, smart storage solutions, and modern aesthetics
-          to make your cooking experience smoother and more enjoyable.
-        </p>
-
-        <div class="mt-4">
-          <h6 class="text-white"><i class="fa-solid fa-check col_brow me-2"></i> Smart & Space-Efficient Layouts</h6>
-          <h6 class="text-white mt-2"><i class="fa-solid fa-check col_brow me-2"></i> Premium-Quality Cabinets & Finishes</h6>
-          <h6 class="text-white mt-2"><i class="fa-solid fa-check col_brow me-2"></i> Skilled Modular Kitchen Experts</h6>
-          <h6 class="text-white mt-2"><i class="fa-solid fa-check col_brow me-2"></i> Seamless Appliance Integration</h6>
+        <!-- Modular Kitchen Planning -->
+        <div class="col-md-4">
+          <div class="offer_lil text-center">
+            <span class="font_60 col_brow">
+              <i class="fa-solid fa-layer-group"></i>
+            </span>
+            <h5 class="mt-3 text-white">Kitchen Layout Planning</h5>
+            <p class="text-white-50">
+              Smart and efficient layout plans designed to make cooking easier and maximize your space.
+            </p>
+          </div>
         </div>
 
-        <a class="button mt-4" href="#">Explore Designs</a>
-      </div>
+        <!-- Modular Cabinets -->
+        <div class="col-md-4">
+          <div class="offer_lil text-center">
+            <span class="font_60 col_brow">
+              <i class="fa-solid fa-kitchen-set"></i>
+            </span>
+            <h5 class="mt-3 text-white">Modular Cabinets</h5>
+            <p class="text-white-50">
+              Premium quality modular cabinets with durable materials, smooth finishes, and soft-close fittings.
+            </p>
+          </div>
+        </div>
 
-      <div class="col-md-6">
-        <figure class="effect-jazz mb-0">
-          <img src="img/why-architects.png" class="w-100" alt="Modular Kitchen Expertise">
-        </figure>
+        <!-- Countertops & Finishes -->
+        <div class="col-md-4">
+          <div class="offer_lil text-center">
+            <span class="font_60 col_brow">
+              <i class="fa-solid fa-brush"></i>
+            </span>
+            <h5 class="mt-3 text-white">Countertops & Finishes</h5>
+            <p class="text-white-50">
+              High-quality granite, quartz, and laminate finishes that combine beauty with long-lasting strength.
+            </p>
+          </div>
+        </div>
+
+        <!-- Storage Optimization -->
+        <div class="col-md-4 mt-4">
+          <div class="offer_lil text-center">
+            <span class="font_60 col_brow">
+              <i class="fa-solid fa-box-open"></i>
+            </span>
+            <h5 class="mt-3 text-white">Storage Optimization</h5>
+            <p class="text-white-50">
+              Customized storage units, tall units, and organizers designed for maximum convenience.
+            </p>
+          </div>
+        </div>
+
+        <!-- Lighting Solutions -->
+        <div class="col-md-4 mt-4">
+          <div class="offer_lil text-center">
+            <span class="font_60 col_brow">
+              <i class="fa-solid fa-lightbulb"></i>
+            </span>
+            <h5 class="mt-3 text-white">Lighting Solutions</h5>
+            <p class="text-white-50">
+              Ambient, task, and under-cabinet lighting to enhance visibility and elevate kitchen aesthetics.
+            </p>
+          </div>
+        </div>
+
+        <!-- Appliance Integration -->
+        <div class="col-md-4 mt-4">
+          <div class="offer_lil text-center">
+            <span class="font_60 col_brow">
+              <i class="fa-solid fa-plug-circle-bolt"></i>
+            </span>
+            <h5 class="mt-3 text-white">Appliance Integration</h5>
+            <p class="text-white-50">
+              Seamless integration of chimneys, hobs, ovens, refrigerators, and other kitchen appliances.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="arch-process" class="p_5 bg-light">
-  <div class="container-xl text-center">
-    <h1 class="mb-5">Our <span class="col_brow">Modular Kitchen Process</span></h1>
 
-    <div class="row">
 
-      <div class="col-md-3">
-        <div class="offer_lil">
-          <span class="font_60 col_brow"><i class="fa-solid fa-comments"></i></span>
-          <h5 class="mt-3">1. Consultation</h5>
-          <p>We understand your kitchen needs, lifestyle, and expectations.</p>
+
+
+
+  <section id="arch-choose" class="p_5 bg_dark_o">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="text-white">
+            Why Choose <span class="col_brow">Aaorama Modular Kitchen</span> Services?
+          </h1>
+          <p class="mt-3 text-white-50">
+            We design modular kitchens that combine style, durability, and maximum space efficiency.
+            Every kitchen is crafted with premium materials, smart storage solutions, and modern aesthetics
+            to make your cooking experience smoother and more enjoyable.
+          </p>
+
+          <div class="mt-4">
+            <h6 class="text-white"><i class="fa-solid fa-check col_brow me-2"></i> Smart & Space-Efficient Layouts</h6>
+            <h6 class="text-white mt-2"><i class="fa-solid fa-check col_brow me-2"></i> Premium-Quality Cabinets &
+              Finishes</h6>
+            <h6 class="text-white mt-2"><i class="fa-solid fa-check col_brow me-2"></i> Skilled Modular Kitchen Experts
+            </h6>
+            <h6 class="text-white mt-2"><i class="fa-solid fa-check col_brow me-2"></i> Seamless Appliance Integration
+            </h6>
+          </div>
+
+          <a class="button mt-4" href="#">Explore Designs</a>
+        </div>
+
+        <div class="col-md-6">
+          <figure class="effect-jazz mb-0">
+            <img src="img/why-architects.png" class="w-100" alt="Modular Kitchen Expertise">
+          </figure>
         </div>
       </div>
-
-      <div class="col-md-3">
-        <div class="offer_lil">
-          <span class="font_60 col_brow"><i class="fa-solid fa-pencil-ruler"></i></span>
-          <h5 class="mt-3">2. Layout Planning</h5>
-          <p>Customized layouts designed for comfort, flow, and maximum space usage.</p>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="offer_lil">
-          <span class="font_60 col_brow"><i class="fa-solid fa-cube"></i></span>
-          <h5 class="mt-3">3. 3D Kitchen Design</h5>
-          <p>Realistic 3D models to visualize colors, cabinets, finishes, and appliance positions.</p>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="offer_lil">
-          <span class="font_60 col_brow"><i class="fa-solid fa-tools"></i></span>
-          <h5 class="mt-3">4. Installation</h5>
-          <p>Precision installation using high-quality materials and expert workmanship.</p>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="arch-process" class="p_5 bg-light">
+    <div class="container-xl text-center">
+      <h1 class="mb-5">Our <span class="col_brow">Modular Kitchen Process</span></h1>
+
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="offer_lil">
+            <span class="font_60 col_brow"><i class="fa-solid fa-comments"></i></span>
+            <h5 class="mt-3">1. Consultation</h5>
+            <p>We understand your kitchen needs, lifestyle, and expectations.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="offer_lil">
+            <span class="font_60 col_brow"><i class="fa-solid fa-pencil-ruler"></i></span>
+            <h5 class="mt-3">2. Layout Planning</h5>
+            <p>Customized layouts designed for comfort, flow, and maximum space usage.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="offer_lil">
+            <span class="font_60 col_brow"><i class="fa-solid fa-cube"></i></span>
+            <h5 class="mt-3">3. 3D Kitchen Design</h5>
+            <p>Realistic 3D models to visualize colors, cabinets, finishes, and appliance positions.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="offer_lil">
+            <span class="font_60 col_brow"><i class="fa-solid fa-tools"></i></span>
+            <h5 class="mt-3">4. Installation</h5>
+            <p>Precision installation using high-quality materials and expert workmanship.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
 
@@ -469,24 +606,24 @@ padding-top:5px;
     <div class="container-xl">
       <!-- Section Heading -->
       <div class="team_1 row mb-4">
-       <div class="col-md-8">
-  <div class="team_1l">
-    <h5 class="icon_line col_brow">Our Projects</h5>
-    <h1 class="mt-3 mb-0 text-white">
-      <span class="col_brow">Architectural Projects</span>
-    </h1>
-  </div>
-</div>
+        <div class="col-md-8">
+          <div class="team_1l">
+            <h5 class="icon_line col_brow">Our Projects</h5>
+            <h1 class="mt-3 mb-0 text-white">
+              <span class="col_brow">Architectural Projects</span>
+            </h1>
+          </div>
+        </div>
 
-<div class="col-md-4">
-  <div class="team_1r text-end mt-4">
-    <p class="mb-0 text-dark">
-      Discover our latest residential and commercial architectural works, designed with creativity,
-      precision, and modern aesthetics. Each project reflects our expertise in planning, 3D elevation,
-      and functional space design.
-    </p>
-  </div>
-</div>
+        <div class="col-md-4">
+          <div class="team_1r text-end mt-4">
+            <p class="mb-0 text-dark">
+              Discover our latest residential and commercial architectural works, designed with creativity,
+              precision, and modern aesthetics. Each project reflects our expertise in planning, 3D elevation,
+              and functional space design.
+            </p>
+          </div>
+        </div>
 
       </div>
 
@@ -549,148 +686,180 @@ padding-top:5px;
   </section>
 
 
-<section id="arch-cta" class="p_5 bg_dark text-center">
-  <h1 class="text-white">Ready to Bring Your Vision to Life?</h1>
-  <p class="text-white-50 mt-3">
-    Let our architectural experts guide you through planning, design, and execution.
-  </p>
-  <a class="button mt-3" href="#">Book a Free Architectural Consultation</a>
-</section>
+  <section id="arch-cta" class="p_5 bg_dark text-center">
+    <h1 class="text-white">Ready to Bring Your Vision to Life?</h1>
+    <p class="text-white-50 mt-3">
+      Let our architectural experts guide you through planning, design, and execution.
+    </p>
+    <a class="button mt-3" href="#">Book a Free Architectural Consultation</a>
+  </section>
 
 
 
   <section id="footer">
-		<div class="offer_m p_3">
-			<div class="container-xl">
-				<div class="footer_1 row">
-					<!-- Column 1: About -->
-					<div class="col-md-5">
-						<div class="footer_1i">
-							<h3>
-								<a class="text-white" href="index.html">
-									<img src="img/aaorama.jpg" style="width:50px;" alt="Aaorama Interiors & Architects Logo">
-									Aaorama Interiors, Architects & Constructions
-								</a>
-							</h3>
-							<hr class="line">
-							<p class="text-white-50">
-								Aaorama Interiors, Architects & Constructions is a leading firm offering end-to-end solutions in
-								interior design,
-								architecture, and construction. We combine innovation, craftsmanship, and engineering excellence to
-								create
-								elegant, durable, and functional spaces that stand the test of time.
-							</p>
+    <div class="offer_m p_3">
+      <div class="container-xl">
+        <div class="footer_1 row">
+          <!-- Column 1: About -->
+          <div class="col-md-5">
+            <div class="footer_1i">
+              <h3>
+                <a class="text-white" href="index.html">
+                  <img src="img/aaorama.jpg" style="width:50px;" alt="Aaorama Interiors & Architects Logo">
+                  Aaorama Interiors, Architects & Constructions
+                </a>
+              </h3>
+              <hr class="line">
+              <p class="text-white-50">
+                Aaorama Interiors, Architects & Constructions is a leading firm offering end-to-end solutions in
+                interior design,
+                architecture, and construction. We combine innovation, craftsmanship, and engineering excellence to
+                create
+                elegant, durable, and functional spaces that stand the test of time.
+              </p>
 
-							<!-- Social Icons -->
-<ul class="social-network social-circle mb-0">
-    <li><a href="#" onclick="openPopup('facebookPopup')" class="icoFacebook"><i class="fab fa-facebook"></i></a></li>
-    <li><a href="#" onclick="openPopup('instagramPopup')" class="icoInstagram"><i class="fab fa-instagram"></i></a></li>
-    <li>
-  <a href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow" 
-     class="icoYoutube" 
-     title="YouTube" 
-     target="_blank">
-    <i class="fab fa-youtube"></i>
-  </a>
-</li>
+              <!-- Social Icons -->
+              <div class="container">
+                <ul class="social-network social-circle mb-0">
+                  <!-- FACEBOOK -->
+                  <li class="social-item" data-social="facebook">
+                    <a href="javascript:void(0)" class="icoFacebook" aria-label="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
 
-    <li><a href="https://www.linkedin.com/company/aaoramainteriors/" onclick="openPopup('linkedinPopup')" class="icoLinkedin"><i class="fab fa-linkedin"></i></a></li>
-</ul>
+                    <!-- Hover / Touch Options: circular images -->
+                    <div class="hover-options" aria-hidden="true">
+                      <!-- Replace src with your interior.png -->
+                      <a class="option" href="https://www.facebook.com/share/1KLHqahhRM/?mibextid=wwXIfr"
+                        target="_blank" rel="noopener noreferrer" title="Interior">
+                        <img src="img/interiors/i6.png" alt="Interior">
+                      </a>
 
-<!-- POPUP: FACEBOOK -->
-<div id="facebookPopup" class="popup1">
-  <div class="popup1-content">
-      <h4>Select Facebook Account</h4>
-      <a href="https://www.facebook.com/share/1KLHqahhRM/?mibextid=wwXIfr" target="_blank">Interior</a>
-      <a href="https://www.facebook.com/share/17T7Vr1od7/?mibextid=wwXIfr" target="_blank">construction</a>
-      <button onclick="closePopup('facebookPopup')">Close</button>
-  </div>
-</div>
+                      <!-- Replace src with your construction.png -->
+                      <a class="option" href="https://www.facebook.com/share/17T7Vr1od7/?mibextid=wwXIfr"
+                        target="_blank" rel="noopener noreferrer" title="Construction">
+                        <img src="img/2.png" alt="Construction">
+                      </a>
+                    </div>
+                  </li>
 
-<!-- POPUP: INSTAGRAM -->
-<div id="instagramPopup" class="popup1">
-  <div class="popup1-content">
-      <h4>Select Instagram Account</h4>
-      <a href="https://www.instagram.com/aaorama.interiors?igsh=MWo1eWVsMjBuYm45MQ==" target="_blank">Interior</a>
-      <a href="https://www.instagram.com/aaorama.constructions?igsh=MWxraDdlNm1nNWI5NA==" target="_blank">construction</a>
-      <button onclick="closePopup('instagramPopup')">Close</button>
-  </div>
-</div>
+                  <!-- INSTAGRAM -->
+                  <li class="social-item" data-social="instagram">
+                    <a href="javascript:void(0)" class="icoInstagram" aria-label="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
 
- 
+                    <div class="hover-options" aria-hidden="true">
+                      <a class="option" href="https://www.instagram.com/aaorama.interiors?igsh=MWo1eWVsMjBuYm45MQ=="
+                        target="_blank" rel="noopener noreferrer" title="Interior">
+                        <img src="img/interiors/i6.png" alt="Interior">
+                      </a>
 
-						</div>
-					</div>
+                      <a class="option" href="https://www.instagram.com/aaorama.constructions?igsh=MWxraDdlNm1nNWI5NA=="
+                        target="_blank" rel="noopener noreferrer" title="Construction">
+                        <img src="img/2.png" alt="Construction">
+                      </a>
+                    </div>
+                  </li>
 
-					<!-- Column 2: Services -->
-					<div class="col-md-3">
-						<div class="footer_1i">
-							<h5 class="text-white">Our Services</h5>
-							<hr class="line">
-							<div class="row footer_3ism">
-								<h6 class="col-md-12 col-6">
-                  <a class="text-white-50" href="architects-services.html"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i>
+                  <!-- YOUTUBE  -->
+                  <li>
+                    <a href="https://youtube.com/@aaoramainteriorsandbuilder2407?si=lBbh6SI3oOxSx9Ow" class="icoYoutube"
+                      title="YouTube" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                  </li>
+
+                  <!-- LINKEDIN  -->
+                  <li>
+                    <a href="https://www.linkedin.com/company/aaoramainteriors/" class="icoLinkedin" target="_blank"
+                      rel="noopener noreferrer">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+
+
+              </div>
+
+
+
+            </div>
+          </div>
+
+          <!-- Column 2: Services -->
+          <div class="col-md-3">
+            <div class="footer_1i">
+              <h5 class="text-white">Our Services</h5>
+              <hr class="line">
+              <div class="row footer_3ism">
+                <h6 class="col-md-12 col-6">
+                  <a class="text-white-50" href="architects-services.html"><i
+                      class="fa fa-chevron-right me-1 font_12 col_brow"></i>
                     Architecture</a>
                 </h6>
                 <h6 class="col-md-12 col-6 mt-2">
-                  <a class="text-white-50" href="interior-services.html"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i> Interior
+                  <a class="text-white-50" href="interior-services.html"><i
+                      class="fa fa-chevron-right me-1 font_12 col_brow"></i> Interior
                     Design</a>
                 </h6>
                 <h6 class="col-md-12 col-6 mt-2">
-                  <a class="text-white-50" href="endtoendsolutions.html"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i> End to End Solutions</a>
+                  <a class="text-white-50" href="endtoendsolutions.html"><i
+                      class="fa fa-chevron-right me-1 font_12 col_brow"></i> End to End Solutions</a>
                 </h6>
                 <h6 class="col-md-12 col-6 mt-2">
-                  <a class="text-white-50" href="modular.html"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i> Modular</a>
+                  <a class="text-white-50" href="modular.html"><i class="fa fa-chevron-right me-1 font_12 col_brow"></i>
+                    Modular</a>
                 </h6>
-							</div>
-						</div>
-					</div>
+              </div>
+            </div>
+          </div>
 
-					<!-- Column 3: Contact -->
-					<div class="col-md-4">
-						<div class="footer_1i">
-							<h5 class="text-white">Contact Us</h5>
-							<hr class="line">
-							<p class="text-white-50">
-								6-38 , Huda Trade Centre , Shopping Complex Nallagandla, Serilingampalle (M), Hyderabad, Telangana
-								500019
-							</p>
-							<h6>
-								<a class="text-white-50" href="tel:+919966911136">
-									<i class="fa fa-phone me-1 fs-5 col_brow align-middle"></i> +91 99669 11136
-								</a>
-								</br>
+          <!-- Column 3: Contact -->
+          <div class="col-md-4">
+            <div class="footer_1i">
+              <h5 class="text-white">Contact Us</h5>
+              <hr class="line">
+              <p class="text-white-50">
+                6-38 , Huda Trade Centre , Shopping Complex Nallagandla, Serilingampalle (M), Hyderabad, Telangana
+                500019
+              </p>
+              <h6>
+                <a class="text-white-50" href="tel:+919966911136">
+                  <i class="fa fa-phone me-1 fs-5 col_brow align-middle"></i> +91 99669 11136
+                </a>
+                </br>
                 <a class="text-white-50" href="tel:+919573872734">
                   <i class="fa fa-phone me-1 fs-5 col_brow align-middle"></i> +91 95738 72734
                 </a>
-							</h6>
-							<h6 class="mt-3">
-								<a class="text-white-50" href="mailto:aaoramainteriorsandarchitects@gmail.com">
-									<i class="fa fa-envelope me-1 fs-5 col_brow align-middle"></i> aaoramainteriorsandarchitects@gmail.com
-								</a>
-							</h6>
-							<h6 class="mt-3">
-								<a class="text-white-50" href="https://aaoramainteriorsandarchitects.com" target="_blank">
-									<i class="fa fa-globe me-1 fs-5 col_brow align-middle"></i> www.aaoramainteriorsandarchitects.com
-								</a>
-							</h6>
-						</div>
-					</div>
-				</div>
+              </h6>
+              <h6 class="mt-3">
+                <a class="text-white-50" href="mailto:aaoramainteriorsandarchitects@gmail.com">
+                  <i class="fa fa-envelope me-1 fs-5 col_brow align-middle"></i> aaoramainteriorsandarchitects@gmail.com
+                </a>
+              </h6>
+              <h6 class="mt-3">
+                <a class="text-white-50" href="https://aaoramainteriorsandarchitects.com" target="_blank">
+                  <i class="fa fa-globe me-1 fs-5 col_brow align-middle"></i> www.aaoramainteriorsandarchitects.com
+                </a>
+              </h6>
+            </div>
+          </div>
+        </div>
 
-				<!-- Footer Bottom -->
-				<div class="footer_2 row text-center bg_dark mx-0 mt-4 p-4">
-					<div class="col-md-12">
-						<p class="mb-0 text-white-50">
-							© 2025 Aaorama Interiors & Architects. All Rights Reserved | Designed by <a class="col_brow fw-bold"
-								href="https://thepatternscompany.com">The Patterns Company</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-<script>
+        <!-- Footer Bottom -->
+        <div class="footer_2 row text-center bg_dark mx-0 mt-4 p-4">
+          <div class="col-md-12">
+            <p class="mb-0 text-white-50">
+              © 2025 Aaorama Interiors & Architects. All Rights Reserved | Designed by <a class="col_brow fw-bold"
+                href="https://thepatternscompany.com">The Patterns Company</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <script>
   function openPopup(id) {
   document.getElementById(id).style.display = "flex";
 }
@@ -699,7 +868,87 @@ function closePopup(id) {
   document.getElementById(id).style.display = "none";
 }
 
-</script>
+</script> -->
+  <script>
+    // Toggle behavior on touch / small screens:
+    // - On touch devices or narrow screens, tapping the icon toggles the options.
+    // - If options are open and user taps outside, close them.
+
+    (function () {
+      const MOBILE_BREAKPOINT = 800; // px; adjust if needed
+      const socialItems = document.querySelectorAll('.social-item');
+
+      // Helper: close all
+      function closeAll() {
+        document.querySelectorAll('.hover-options').forEach(el => {
+          el.classList.remove('show');
+          el.setAttribute('aria-hidden', 'true');
+        });
+        document.body.removeEventListener('click', bodyClickHandler);
+      }
+
+      // Body click handler to close when clicking outside
+      function bodyClickHandler(e) {
+        // if click is inside a .social-item, do nothing
+        if (e.target.closest('.social-item')) return;
+        closeAll();
+      }
+
+      function isMobileView() {
+        return window.innerWidth <= MOBILE_BREAKPOINT || ('ontouchstart' in window && window.innerWidth <= 1000);
+      }
+
+      socialItems.forEach(item => {
+        const icon = item.querySelector('a');
+        const menu = item.querySelector('.hover-options');
+
+        // Ensure link not navigating to top (we used javascript:void(0) already)
+        icon.addEventListener('click', function (e) {
+          if (isMobileView()) {
+            e.preventDefault();
+            // Toggle this menu
+            const visible = menu.classList.contains('show');
+            closeAll(); // close others
+            if (!visible) {
+              menu.classList.add('show');
+              menu.setAttribute('aria-hidden', 'false');
+              // add outside click listener
+              setTimeout(() => {
+                document.body.addEventListener('click', bodyClickHandler);
+              }, 0);
+            } else {
+              closeAll();
+            }
+          } else {
+            // On desktop clicks, do nothing (hover will handle it). Prevent accidental focus scroll.
+            e.preventDefault();
+          }
+        });
+
+        // Also close menu when any option is clicked (on mobile)
+        menu.querySelectorAll('a').forEach(opt => {
+          opt.addEventListener('click', () => {
+            closeAll();
+          });
+        });
+      });
+
+      // Close menus on resize if necessary
+      window.addEventListener('resize', () => {
+        if (!isMobileView()) closeAll();
+      });
+    })();
+  </script>
+  <!-- <script>
+  function openPopup(id) {
+  document.getElementById(id).style.display = "flex";
+} -->
+
+  function closePopup(id) {
+  document.getElementById(id).style.display = "none";
+  }
+
+  </script>
 
   <script>
     window.onscroll = function () { myFunction() };
@@ -716,54 +965,52 @@ function closePopup(id) {
       }
     }
   </script>
-<!-- Chatbot Widget -->
-<div id="chatbot" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; font-family: 'Poppins', Arial, sans-serif;">
-  
-  <!-- Floating Button -->
-  <div id="chatbot-button" 
-       style="width: 60px; height: 60px; border-radius: 50%; background: #ffcc00; 
+  <!-- Chatbot Widget -->
+  <div id="chatbot"
+    style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; font-family: 'Poppins', Arial, sans-serif;">
+
+    <!-- Floating Button -->
+    <div id="chatbot-button" style="width: 60px; height: 60px; border-radius: 50%; background: #ffcc00; 
               display:flex; justify-content:center; align-items:center; cursor:pointer; 
               box-shadow:0px 4px 12px rgba(0,0,0,0.3);">
-    🤖
-  </div>
+      🤖
+    </div>
 
-  <!-- Chat Window -->
-  <div id="chat-window" 
-       style="width: 350px; background:white; border-radius:20px; padding:20px; 
+    <!-- Chat Window -->
+    <div id="chat-window" style="width: 350px; background:white; border-radius:20px; padding:20px; 
               margin-top:10px; display:none; box-shadow:0px 6px 18px rgba(0,0,0,0.25); position:relative;">
 
       <!-- Close Button -->
-      <div id="close-chat"
-           style="position:absolute; right:15px; top:10px; font-size:20px; cursor:pointer; color:#444;">
+      <div id="close-chat" style="position:absolute; right:15px; top:10px; font-size:20px; cursor:pointer; color:#444;">
         ✖
       </div>
 
       <!-- Greeting -->
-     <div style="display:flex; flex-direction:column; align-items:flex-start; margin-bottom:10px;">
-    
-    <div style="display:flex; flex-direction:column; align-items:flex-start; margin-bottom:10px;">
+      <div style="display:flex; flex-direction:column; align-items:flex-start; margin-bottom:10px;">
 
-    <!-- Emoji TOP-LEFT -->
-    <div style="font-size:100px; line-height:1; text-align:right;">👋</div>
+        <div style="display:flex; flex-direction:column; align-items:flex-start; margin-bottom:10px;">
 
-    <!-- Text BELOW -->
-    <div style="text-align:left; margin-top:10px;">
-        <div style="font-size:25px; font-weight:600;">Welcome</div>
-        <div style="font-size:15px; font-weight:500;">Aaorama Interiors & Architects!!</div>
-    </div>
+          <!-- Emoji TOP-LEFT -->
+          <div style="font-size:100px; line-height:1; text-align:right;">👋</div>
 
-</div>
+          <!-- Text BELOW -->
+          <div style="text-align:left; margin-top:10px;">
+            <div style="font-size:25px; font-weight:600;">Welcome</div>
+            <div style="font-size:15px; font-weight:500;">Aaorama Interiors & Architects!!</div>
+          </div>
+
+        </div>
 
 
-    
-</div>
+
+      </div>
 
 
 
 
 
       <h3 style="margin-top:5px; font-size:18px; font-weight:600;">
-         The Most Reliable Brand for Home Interiors in India 🎉
+        The Most Reliable Brand for Home Interiors in India 🎉
       </h3>
 
       <p style="font-size:14px; margin-top:10px;">
@@ -773,15 +1020,13 @@ function closePopup(id) {
       <!-- Buttons -->
       <div style="margin-top:20px;">
 
-        <button 
-                style="width:100%; padding:12px; margin-top:10px; border:none; 
+        <button style="width:100%; padding:12px; margin-top:10px; border:none; 
                        background:white; border-radius:30px; font-size:15px; 
                        box-shadow:0 0 8px rgba(0,0,0,0.15); cursor:pointer;">
           Request a Design Consultation
         </button>
 
-        <button 
-                style="width:100%; padding:12px; margin-top:10px; border:none; 
+        <button style="width:100%; padding:12px; margin-top:10px; border:none; 
                        background:white; border-radius:30px; font-size:15px;
                        box-shadow:0 0 8px rgba(0,0,0,0.15); cursor:pointer; color:#ff9800; font-weight:600;">
           Estimate Interior Cost
@@ -792,32 +1037,32 @@ function closePopup(id) {
       <!-- Profile Photo -->
       <!-- <img src="https://i.ibb.co/fpQ9h2S/usergirl.png" 
            style="width:50px; height:50px; border-radius:50%; position:absolute; bottom:-25px; right:20px; box-shadow:0 2px 10px rgba(0,0,0,0.3);"> -->
+    </div>
   </div>
-</div>
 
-<script>
-  const chatWindow = document.getElementById("chat-window");
-  const chatButton = document.getElementById("chatbot-button");
-  const closeChat = document.getElementById("close-chat");
+  <script>
+    const chatWindow = document.getElementById("chat-window");
+    const chatButton = document.getElementById("chatbot-button");
+    const closeChat = document.getElementById("close-chat");
 
-  // Open the chatbot
-  chatButton.onclick = () => {
-    chatWindow.style.display = "block";
-  };
+    // Open the chatbot
+    chatButton.onclick = () => {
+      chatWindow.style.display = "block";
+    };
 
-  // Close when click X
-  closeChat.onclick = () => {
-    chatWindow.style.display = "none";
-  };
-
-  // Close when clicking outside chatbot
-  document.addEventListener("click", function (event) {
-    const isClickInside = chatWindow.contains(event.target) || chatButton.contains(event.target);
-    if (!isClickInside) {
+    // Close when click X
+    closeChat.onclick = () => {
       chatWindow.style.display = "none";
-    }
-  });
-</script>
+    };
+
+    // Close when clicking outside chatbot
+    document.addEventListener("click", function (event) {
+      const isClickInside = chatWindow.contains(event.target) || chatButton.contains(event.target);
+      if (!isClickInside) {
+        chatWindow.style.display = "none";
+      }
+    });
+  </script>
 </body>
 
 </html>
