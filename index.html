@@ -146,6 +146,30 @@
       color: #bbb;
       font-size: 14px;
     }
+
+    /* Mobile View Adjustments */
+@media (max-width: 576px) {
+  .serv_2i3 {
+    padding: 10px !important;         /* Reduce white box size */
+  }
+
+  .serv_2i3 h6 {
+    font-size: 12px !important;       /* Smaller sub-title */
+  }
+
+  .serv_2i3 h5 {
+    font-size: 14px !important;       /* Smaller main title */
+  }
+
+  .serv_2i3 h5 a {
+    line-height: 1.2 !important;      /* Tight spacing */
+  }
+
+  .serv_2i {
+    margin-bottom: 15px !important;   /* Better spacing between cards */
+  }
+}
+
   </style>
 </head>
 
@@ -462,8 +486,7 @@
           <div class="offer_r">
             <div class="grid clearfix">
               <figure class="effect-jazz mb-0">
-                <a href="#"><img src="img/home2.JPG" height="340" class="w-100 offer-img"
-                    alt="Interior Design"></a>
+                <a href="#"><img src="img/home2.JPG" height="340" class="w-100 offer-img" alt="Interior Design"></a>
               </figure>
             </div>
           </div>
@@ -583,6 +606,15 @@
       border-radius: 15% 15% 15% 15%;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3);
     }
+
+
+
+    .transparent-bg {
+      background: rgba(255, 255, 255, 0.3);
+      /* 30% white */
+      backdrop-filter: blur(5px);
+      /* optional glass effect */
+    }
   </style>
 
   <section id="serv" class="p_5">
@@ -599,16 +631,18 @@
 
       <div class="serv_2 row">
         <!-- Service 1 -->
-        <div class="col-md-3 col-sm-6">
+         <!-- col-md-3 col-sm-6 -->
+        <div class="col-lg-3 col-md-3 col-sm-6 col-6">
           <div class="serv_2i position-relative">
             <div class="serv_2i1">
               <div class="grid clearfix">
                 <figure class="effect-jazz mb-0">
-                  <a href="#"><img src="img/interiors/ResidentialInteriors.png" class="w-100" alt="Residential Interior"></a>
+                  <a href="javascript:void(0)"><img src="img/interiors/ResidentialInteriors.png" class="w-100"
+                      alt="Residential Interior"></a>
                 </figure>
               </div>
             </div>
-
+            <!-- transparent-bg -->
             <div class="serv_2i3 position-absolute bg-white p-4">
               <h6 class="text-muted">Interiors</h6>
               <h5 class="mb-0"><a href="javascript:void(0)">Residential Interiors</a></h5>
@@ -617,12 +651,13 @@
         </div>
 
         <!-- Service 2 -->
-        <div class="col-md-3 col-sm-6">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-6">
           <div class="serv_2i position-relative">
             <div class="serv_2i1">
               <div class="grid clearfix">
                 <figure class="effect-jazz mb-0">
-                  <a href="javascript:void(0)"><img src="img/construction1/CommercialArchitecture.png" class="w-100" alt="Commercial Design"></a>
+                  <a href="javascript:void(0)"><img src="img/construction1/CommercialArchitecture.png" class="w-100"
+                      alt="Commercial Design"></a>
                 </figure>
               </div>
             </div>
@@ -635,12 +670,13 @@
         </div>
 
         <!-- Service 3 -->
-        <div class="col-md-3 col-sm-6">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-6">
           <div class="serv_2i position-relative">
             <div class="serv_2i1">
               <div class="grid clearfix">
                 <figure class="effect-jazz mb-0">
-                  <a href="javascript:void(0)"><img src="img/interiors/ModularKitchenDesign.png" class="w-100" alt="Modular Kitchen Design"></a>
+                  <a href="javascript:void(0)"><img src="img/interiors/ModularKitchenDesign.png" class="w-100"
+                      alt="Modular Kitchen Design"></a>
                 </figure>
               </div>
             </div>
@@ -653,12 +689,13 @@
         </div>
 
         <!-- Service 4 -->
-        <div class="col-md-3 col-sm-6">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-6">
           <div class="serv_2i position-relative">
             <div class="serv_2i1">
               <div class="grid clearfix">
                 <figure class="effect-jazz mb-0">
-                  <a href="javascript:void(0)"><img src="img/interiors/Home&OfficeRenovation.png" class="w-100" alt="Renovation Service"></a>
+                  <a href="javascript:void(0)"><img src="img/interiors/Home&OfficeRenovation.png" class="w-100"
+                      alt="Renovation Service"></a>
                 </figure>
               </div>
             </div>
@@ -972,7 +1009,8 @@
             <div class="serv_2i1">
               <div class="grid clearfix">
                 <figure class="effect-jazz mb-0">
-                  <a href="javascript:void(0)"><img src="img/interiors/LuxuryLivingRoomDesign.png" class="w-100" alt="Luxury Living Room Interior Design"></a>
+                  <a href="javascript:void(0)"><img src="img/interiors/LuxuryLivingRoomDesign.png" class="w-100"
+                      alt="Luxury Living Room Interior Design"></a>
                 </figure>
               </div>
             </div>
@@ -990,7 +1028,8 @@
             <div class="serv_2i1">
               <div class="grid clearfix">
                 <figure class="effect-jazz mb-0">
-                  <a href="#"><img src="img/interiors/ModernOfficeSpaceDesign.png" class="w-100" alt="Modern Office Architecture"></a>
+                  <a href="#"><img src="img/interiors/ModernOfficeSpaceDesign.png" class="w-100"
+                      alt="Modern Office Architecture"></a>
                 </figure>
               </div>
             </div>
@@ -1008,7 +1047,8 @@
             <div class="serv_2i1">
               <div class="grid clearfix">
                 <figure class="effect-jazz mb-0">
-                  <a href="javascript:void(0)"><img src="img/interiors/ElegantModularKitchenSetup.png" class="w-100" alt="Elegant Kitchen Interior"></a>
+                  <a href="javascript:void(0)"><img src="img/interiors/ElegantModularKitchenSetup.png" class="w-100"
+                      alt="Elegant Kitchen Interior"></a>
                 </figure>
               </div>
             </div>
