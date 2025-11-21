@@ -1168,7 +1168,7 @@ progress {
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:992px) {
     .col-md {
         flex: 1 0 0%
     }
@@ -4068,7 +4068,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:992px) {
     .dropdown-menu-md-start {
         --bs-position: start
     }
@@ -4717,7 +4717,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:992px) {
     .navbar-expand-md {
         flex-wrap: nowrap;
         justify-content: flex-start
