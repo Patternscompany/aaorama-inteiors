@@ -170,6 +170,8 @@
   }
 }
 
+
+
   </style>
 </head>
 
@@ -498,7 +500,7 @@ width:unset !important;
           <div class="offer_r">
             <div class="grid clearfix">
               <figure class="effect-jazz mb-0">
-                <a href="#"><img src="img/home2.JPG" height="340" class="w-100 offer-img" alt="Interior Design"></a>
+                <a href="#"><img src="img/interiors/1.JPG" height="340" class="w-100 offer-img" alt="Interior Design"></a>
               </figure>
             </div>
           </div>
@@ -512,7 +514,7 @@ width:unset !important;
           <div class="offer_r">
             <div class="grid clearfix">
               <figure class="effect-jazz mb-0">
-                <a href="javascript:void(0)"><img src="img/interiors/home.png" height="500" class="w-100 offer-imgg"
+                <a href="javascript:void(0)"><img src="img/interiors/hombo.png" height="500" class="w-100 offer-imgg"
                     alt="Architecture Design"></a>
               </figure>
             </div>
@@ -880,17 +882,16 @@ width:unset !important;
               <div class="testim_1i mx-0 row">
                 <div class="col-md-6">
                   <div class="testim_1i1 bg-light p-4">
-                    <img src="img/ts.png" alt="Client Testimonial 1" width="80" height="80" class="rounded-circle">
+                    <img src="img/ts10.png" alt="Client Testimonial 1" width="80" height="80" class="rounded-circle">
                     <p class="mt-4">
-                      We are so grateful to have chosen aaorama for our recent project. We had the pleasure of working
-                      closely with the team. They were professional, supportive, and understood every part of what we
-                      wanted to capture in great detail. They captured not only the design of the space that we wanted
-                      to create, but also how we wanted guests to feel. Thank you so much for your help. I have been
-                      recommending your service to my friends and relatives as well 👌
+                     Best interior design team I have ever seen. Their detailing is really awesome. Professional team, maintains the best quality, and timely response is the superb factor they own. Being customers, sometimes we may ignore some minor errors but Mr. Prashanth Reddy never compromises on the same, he takes each and every smaller things into consideration and executes the project the best way possible.
+
+Once again, thank you so much Prashanth for all your support and response.
                     </p>
                     <h5>
-                      vishal darai</h5>
+                      Satish Reddy</h5>
                     <!-- <h6 class="mb-0 col_brow">Homeowner, Hyderabad</h6> -->
+
                   </div>
                 </div>
 
@@ -1471,6 +1472,21 @@ Overall, if you’re looking for a dependable interior designer in Hyderabad —
 </script>
 
 
+<script>
+    // Check loader disappearance every 100ms
+    const chatbot = document.getElementById("chatbot");
+    chatbot.style.display = "none"; // hide initially
+
+    const loaderCheck = setInterval(() => {
+        const loader = document.getElementById("loader");
+
+        // When loader is gone or hidden
+        if (!loader || loader.style.display === "none" || loader.style.visibility === "hidden") {
+            chatbot.style.display = "block";   // show chatbot
+            clearInterval(loaderCheck);        // stop checking
+        }
+    }, 100);
+</script>
 
 
 

@@ -1093,6 +1093,22 @@ function closePopup(id) {
       }
     });
   </script>
+  <script>
+    // Check loader disappearance every 100ms
+    const chatbot = document.getElementById("chatbot");
+    chatbot.style.display = "none"; // hide initially
+
+    const loaderCheck = setInterval(() => {
+        const loader = document.getElementById("loader");
+
+        // When loader is gone or hidden
+        if (!loader || loader.style.display === "none" || loader.style.visibility === "hidden") {
+            chatbot.style.display = "block";   // show chatbot
+            clearInterval(loaderCheck);        // stop checking
+        }
+    }, 100);
+</script>
+
 </body>
 
 </html>
