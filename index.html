@@ -500,7 +500,7 @@ width:unset !important;
           <div class="offer_r">
             <div class="grid clearfix">
               <figure class="effect-jazz mb-0">
-                <a href="#"><img src="img/interiors/1.JPG" height="340" class="w-100 offer-img" alt="Interior Design"></a>
+                <a href="#"><img src="img/interiors/1.png"  class="w-100 offer-img" alt="Interior Design" /></a>
               </figure>
             </div>
           </div>
@@ -508,14 +508,14 @@ width:unset !important;
       </div>
 
       <!-- Second Row -->
-      <div class="row work_1 mt-5">
+      <div class="row work_1 mt-5 align-items-center">
         <!-- Left Image -->
         <div class="col-md-6">
           <div class="offer_r">
             <div class="grid clearfix">
               <figure class="effect-jazz mb-0">
-                <a href="javascript:void(0)"><img src="img/interiors/homeabout3.png" height="500" class="w-100 offer-imgg"
-                    alt="Architecture Design"></a>
+                <a href="javascript:void(0)"><img src="img/interiors/homeabout3.png"  class="w-100 offer-img"
+                    alt="Architecture Design" /></a>
               </figure>
             </div>
           </div>
@@ -619,9 +619,22 @@ width:unset !important;
     #offer figure {
       border-radius: 15% 15% 15% 15%;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3);
+    
+    }
+    #offer img{
+      height:400px;
     }
 
+@media(max-width:992px){
+  #offer img{
+    width:unset !important;
+  }
+  #offer figure{
+    box-shadow:none !important;
+    border-radius: 10px;
 
+  }
+}
 
     .transparent-bg {
       background: rgba(255, 255, 255, 0.3);
