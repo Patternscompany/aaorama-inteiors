@@ -701,76 +701,96 @@
  </div>
 </section> -->
 
-  <div style="
-    max-width: 900px; 
-    margin: 40px auto; 
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    font-family: 'Poppins', sans-serif;
-">
-
-    <!-- Box 1 -->
-    <div style="
-        flex: 1 1 calc(50% - 10px); 
-        max-width: calc(50% - 10px);
-        padding: 20px; 
-        margin-bottom: 20px;
-        border: 2px solid #e0e0e0; 
-        border-radius: 10px; 
-        text-align: center; 
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    ">
-      <h2 class="count" data-target="35" style="margin: 0; font-size: 32px; color: #222;">0</h2>
-      <p style="margin: 5px 0; font-size: 16px; color: #555;">Successful Projects</p>
-    </div>
-
-    <!-- Box 2 -->
-    <div style="
-        flex: 1 1 calc(50% - 10px); 
-        max-width: calc(50% - 10px);
-        padding: 20px; 
-        margin-bottom: 20px;
-        border: 2px solid #e0e0e0; 
-        border-radius: 10px; 
-        text-align: center; 
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    ">
-      <h2 class="count" data-target="30" style="margin: 0; font-size: 32px; color: #222;">0</h2>
-      <p style="margin: 5px 0; font-size: 16px; color: #555;">Happy Clients</p>
-    </div>
-
-    <!-- Box 3 -->
-    <div style="
-        flex: 1 1 calc(50% - 10px); 
-        max-width: calc(50% - 10px);
-        padding: 20px; 
-        margin-bottom: 20px;
-        border: 2px solid #e0e0e0; 
-        border-radius: 10px; 
-        text-align: center; 
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    ">
-      <h2 class="count" data-target="8" style="margin: 0; font-size: 32px; color: #222;">0</h2>
-      <p style="margin: 5px 0; font-size: 16px; color: #555;">Years of Experience</p>
-    </div>
-
-    <!-- Box 4 -->
-    <div style="
-        flex: 1 1 calc(50% - 10px);
-        max-width: calc(50% - 10px);
-        padding: 20px; 
-        margin-bottom: 20px;
-        border: 2px solid #e0e0e0; 
-        border-radius: 10px; 
-        text-align: center; 
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    ">
-      <h2 class="count" data-target="10" style="margin: 0; font-size: 32px; color: #222;">0</h2>
-      <p style="margin: 5px 0; font-size: 16px; color: #555;">Team Members</p>
-    </div>
-
+ <div class="counter-wrapper">
+  
+  <div class="counter-box">
+    <h2 class="count" data-target="35">0</h2>
+    <p>Successful Projects</p>
   </div>
+
+  <div class="counter-box">
+    <h2 class="count" data-target="30">0</h2>
+    <p>Happy Clients</p>
+  </div>
+
+  <div class="counter-box">
+    <h2 class="count" data-target="8">0</h2>
+    <p>Years of Experience</p>
+  </div>
+
+  <div class="counter-box">
+    <h2 class="count" data-target="10">0</h2>
+    <p>Team Members</p>
+  </div>
+
+</div>
+
+<style>
+  .counter-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    gap: 20px;
+}
+
+.counter-box {
+    flex: 1 1 calc(50% - 10px);
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    border: 1px solid #eee;
+    position: relative;
+    overflow: hidden;
+     box-shadow: 0 22px 45px rgba(0,0,0,0.18);
+    transition: 0.4s ease;
+    border-color: #C89A4B;
+
+}
+
+/* Gold glow on hover */
+.counter-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 45px rgba(0,0,0,0.18);
+}
+
+.counter-box::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(200,154,75,0.15), transparent 70%);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.counter-box:hover::before {
+    opacity: 1;
+    top: -40%;
+    left: -40%;
+}
+
+
+.counter-box h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+.counter-box p {
+    margin-top: 8px;
+    color: #555;
+    font-size: 16px;
+}
+
+</style>
 
   <!-- Animation Script -->
   <script>
