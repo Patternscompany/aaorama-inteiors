@@ -364,19 +364,15 @@
           </p>
 
           <!-- Experience Box -->
-          <div class="mt-4 d-flex justify-content-center">
-            <div style="
-                background:#C89A4B;
-                padding:35px 30px;
-                border-radius:12px;
-                color:white;
-                max-width:320px;
-             ">
-              <p class="mb-1">We have more than</p>
-              <h1 style="font-size:42px; font-weight:700;" class="mb-0">13+ Years</h1>
-              <p class="mt-2 mb-0">of Industry Experience</p>
-            </div>
-          </div>
+         <div class="exp-glass-wrapper mt-4 d-flex justify-content-center">
+  <div class="exp-gradient-box">
+    <p class="exp-sub">We have more than</p>
+    <h1 class="exp-main">13+ Years</h1>
+    <p class="exp-sub2">of Industry Experience</p>
+  </div>
+</div>
+
+
         </div>
 
         <!-- RIGHT IMAGE (Visible only on Desktop) -->
@@ -389,7 +385,54 @@
     </div>
   </section>
 
+<style>
+  .exp-gradient-box {
+    position: relative;
+    padding: 40px 35px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 350px;
+    color: #fff;
+    background: #1a1a1a;
+    overflow: hidden;
+}
 
+.exp-gradient-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #C89A4B, #f0d095, #b47f26, #C89A4B);
+    animation: rotate 5s linear infinite;
+    z-index: 0;
+}
+
+.exp-gradient-box::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: #111;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.exp-gradient-box * {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+.exp-gradient-box h1 {
+    font-size: 46px;
+    font-weight: 900;
+}
+
+</style>
 
   <section id="offer" class="bg_dark p_3">
     <div class="container-xl">
