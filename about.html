@@ -364,13 +364,13 @@
           </p>
 
           <!-- Experience Box -->
-         <div class="exp-glass-wrapper mt-4 d-flex justify-content-center">
-  <div class="exp-gradient-box">
-    <p class="exp-sub">We have more than</p>
-    <h1 class="exp-main">13+ Years</h1>
-    <p class="exp-sub2">of Industry Experience</p>
-  </div>
-</div>
+          <div class="exp-glass-wrapper mt-4 d-flex justify-content-center">
+            <div class="exp-gradient-box">
+              <p class="exp-sub">We have more than</p>
+              <h1 class="exp-main">13+ Years</h1>
+              <p class="exp-sub2">of Industry Experience</p>
+            </div>
+          </div>
 
 
         </div>
@@ -385,54 +385,55 @@
     </div>
   </section>
 
-<style>
-  .exp-gradient-box {
-    position: relative;
-    padding: 40px 35px;
-    border-radius: 16px;
-    text-align: center;
-    max-width: 350px;
-    color: #fff;
-    background: #1a1a1a;
-    overflow: hidden;
-}
+  <style>
+    .exp-gradient-box {
+      position: relative;
+      padding: 40px 35px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 350px;
+      color: #fff;
+      background: #1a1a1a;
+      overflow: hidden;
+    }
 
-.exp-gradient-box::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, #C89A4B, #f0d095, #b47f26, #C89A4B);
-    animation: rotate 5s linear infinite;
-    z-index: 0;
-}
+    .exp-gradient-box::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, #C89A4B, #f0d095, #b47f26, #C89A4B);
+      animation: rotate 5s linear infinite;
+      z-index: 0;
+    }
 
-.exp-gradient-box::after {
-    content: "";
-    position: absolute;
-    inset: 4px;
-    background: #111;
-    border-radius: inherit;
-    z-index: 1;
-}
+    .exp-gradient-box::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      background: #111;
+      border-radius: inherit;
+      z-index: 1;
+    }
 
-.exp-gradient-box * {
-    position: relative;
-    z-index: 2;
-}
+    .exp-gradient-box * {
+      position: relative;
+      z-index: 2;
+    }
 
-@keyframes rotate {
-    100% { transform: rotate(360deg); }
-}
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
 
-.exp-gradient-box h1 {
-    font-size: 46px;
-    font-weight: 900;
-}
-
-</style>
+    .exp-gradient-box h1 {
+      font-size: 46px;
+      font-weight: 900;
+    }
+  </style>
 
   <section id="offer" class="bg_dark p_3">
     <div class="container-xl">
@@ -701,96 +702,95 @@
  </div>
 </section> -->
 
- <div class="counter-wrapper">
-  
-  <div class="counter-box">
-    <h2 class="count" data-target="35">0</h2>
-    <p>Successful Projects</p>
+  <div class="counter-wrapper">
+
+    <div class="counter-box">
+      <h2 class="count" data-target="35">0</h2>
+      <p>Successful Projects</p>
+    </div>
+
+    <div class="counter-box">
+      <h2 class="count" data-target="30">0</h2>
+      <p>Happy Clients</p>
+    </div>
+
+    <div class="counter-box">
+      <h2 class="count" data-target="8">0</h2>
+      <p>Years of Experience</p>
+    </div>
+
+    <div class="counter-box">
+      <h2 class="count" data-target="10">0</h2>
+      <p>Team Members</p>
+    </div>
+
   </div>
 
-  <div class="counter-box">
-    <h2 class="count" data-target="30">0</h2>
-    <p>Happy Clients</p>
-  </div>
+  <style>
+    .counter-wrapper {
+      max-width: 900px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-family: 'Poppins', sans-serif;
+      gap: 20px;
+    }
 
-  <div class="counter-box">
-    <h2 class="count" data-target="8">0</h2>
-    <p>Years of Experience</p>
-  </div>
+    .counter-box {
+      flex: 1 1 calc(50% - 10px);
+      padding: 30px 20px;
+      border-radius: 16px;
+      text-align: center;
+      background: #fff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      border: 1px solid #eee;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 22px 45px rgba(0, 0, 0, 0.18);
+      transition: 0.4s ease;
+      border-color: #C89A4B;
 
-  <div class="counter-box">
-    <h2 class="count" data-target="10">0</h2>
-    <p>Team Members</p>
-  </div>
+    }
 
-</div>
+    /* Gold glow on hover */
+    .counter-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 22px 45px rgba(0, 0, 0, 0.18);
+    }
 
-<style>
-  .counter-wrapper {
-    max-width: 900px;
-    margin: 40px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-family: 'Poppins', sans-serif;
-    gap: 20px;
-}
+    .counter-box::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: -40%;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(200, 154, 75, 0.15), transparent 70%);
+      opacity: 1;
+      transition: 0.5s;
+    }
 
-.counter-box {
-    flex: 1 1 calc(50% - 10px);
-    padding: 30px 20px;
-    border-radius: 16px;
-    text-align: center;
-    background: #fff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    border: 1px solid #eee;
-    position: relative;
-    overflow: hidden;
-     box-shadow: 0 22px 45px rgba(0,0,0,0.18);
-    transition: 0.4s ease;
-    border-color: #C89A4B;
-
-}
-
-/* Gold glow on hover */
-.counter-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 22px 45px rgba(0,0,0,0.18);
-}
-
-.counter-box::before {
-    content: "";
-    position: absolute;
-    top: -40%;
-    left: -40%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle, rgba(200,154,75,0.15), transparent 70%);
-    opacity: 1;
-    transition: 0.5s;
-}
-
-.counter-box:hover::before {
-    opacity: 1;
-    top: -40%;
-    left: -40%;
-}
+    .counter-box:hover::before {
+      opacity: 1;
+      top: -40%;
+      left: -40%;
+    }
 
 
-.counter-box h2 {
-    font-size: 40px;
-    font-weight: 700;
-    color: #222;
-    margin: 0;
-}
+    .counter-box h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #222;
+      margin: 0;
+    }
 
-.counter-box p {
-    margin-top: 8px;
-    color: #555;
-    font-size: 16px;
-}
-
-</style>
+    .counter-box p {
+      margin-top: 8px;
+      color: #555;
+      font-size: 16px;
+    }
+  </style>
 
   <!-- Animation Script -->
   <script>
@@ -1104,7 +1104,7 @@
         </div>
 
         <!-- Footer Bottom -->
-        <div class="footer_2 row text-center bg_dark mx-0 mt-4 p-4">
+        <div class="footer_2 row text-center mx-0 p-4">
           <div class="col-md-12">
             <p class="mb-0 text-white-50">
               © 2025 Aaorama Interiors & Architects. All Rights Reserved | Designed by <a class="col_brow fw-bold"
@@ -1190,7 +1190,7 @@
   document.getElementById(id).style.display = "flex";
 } -->
 
- <!-- function closePopup(id)  {
+  <!-- function closePopup(id)  {
   document.getElementById(id).style.display = "none";
   } -->
 
@@ -1222,84 +1222,12 @@ function closePopup(id) {
       }
     }
   </script>
-  <!-- Chatbot Widget -->
-  <div id="chatbot"
-    style="position: fixed; bottom: 90px; right: 20px; z-index: 9999; font-family: 'Poppins', Arial, sans-serif;">
-
-    <!-- Floating Button -->
-    <div id="chatbot-button" 
-     style="width: 60px; height: 60px; border-radius: 50%; background: #ffcc00;
-            display:flex; justify-content:center; align-items:center; cursor:pointer;
-            box-shadow:0px 4px 12px rgba(0,0,0,0.3); overflow:hidden;">
-
-    <img src="img/chatbotlogo.png" 
-         alt="chatbot" 
-         style="width:100%; height:100%; object-fit:cover;">
-</div>
-
-    <!-- Chat Window -->
-    <div id="chat-window" style="width: 350px; background:white; border-radius:20px; padding:20px; 
-              margin-top:10px; display:none; box-shadow:0px 6px 18px rgba(0,0,0,0.25); position:relative;">
-
-      <!-- Close Button -->
-      <div id="close-chat" style="position:absolute; right:15px; top:10px; font-size:20px; cursor:pointer; color:#444;">
-        ✖
-      </div>
-
-      <!-- Greeting -->
-      <div style="display:flex; flex-direction:column; align-items:flex-start; margin-bottom:10px;">
-
-        <div style="display:flex; flex-direction:column; align-items:flex-start; margin-bottom:10px;">
-
-          <!-- Emoji TOP-LEFT -->
-          <div style="font-size:100px; line-height:1; text-align:right;">👋</div>
-
-          <!-- Text BELOW -->
-          <div style="text-align:left; margin-top:10px;">
-            <div style="font-size:25px; font-weight:600;">Welcome</div>
-            <div style="font-size:15px; font-weight:500;">Aaorama Interiors & Architects!!</div>
-          </div>
-
-        </div>
-
-
-
-      </div>
 
 
 
 
 
-      <h3 style="margin-top:5px; font-size:18px; font-weight:600;">
-        The Most Reliable Brand for Home Interiors in India 🎉
-      </h3>
 
-      <p style="font-size:14px; margin-top:10px;">
-        I'm <b style="background:#eee; padding:2px 6px; border-radius:5px;">Mounika</b>. I'm here to assist you.
-      </p>
-
-      <!-- Buttons -->
-      <div style="margin-top:20px;">
-
-        <button style="width:100%; padding:12px; margin-top:10px; border:none; 
-                       background:white; border-radius:30px; font-size:15px; 
-                       box-shadow:0 0 8px rgba(0,0,0,0.15); cursor:pointer;">
-          Request a Design Consultation
-        </button>
-
-        <button style="width:100%; padding:12px; margin-top:10px; border:none; 
-                       background:white; border-radius:30px; font-size:15px;
-                       box-shadow:0 0 8px rgba(0,0,0,0.15); cursor:pointer; color:#ff9800; font-weight:600;">
-          Estimate Interior Cost
-        </button>
-
-      </div>
-
-      <!-- Profile Photo -->
-      <!-- <img src="https://i.ibb.co/fpQ9h2S/usergirl.png" 
-           style="width:50px; height:50px; border-radius:50%; position:absolute; bottom:-25px; right:20px; box-shadow:0 2px 10px rgba(0,0,0,0.3);"> -->
-    </div>
-  </div>
 
   <script>
     const chatWindow = document.getElementById("chat-window");
@@ -1330,15 +1258,15 @@ function closePopup(id) {
     chatbot.style.display = "none"; // hide initially
 
     const loaderCheck = setInterval(() => {
-        const loader = document.getElementById("loader");
+      const loader = document.getElementById("loader");
 
-        // When loader is gone or hidden
-        if (!loader || loader.style.display === "none" || loader.style.visibility === "hidden") {
-            chatbot.style.display = "block";   // show chatbot
-            clearInterval(loaderCheck);        // stop checking
-        }
+      // When loader is gone or hidden
+      if (!loader || loader.style.display === "none" || loader.style.visibility === "hidden") {
+        chatbot.style.display = "block";   // show chatbot
+        clearInterval(loaderCheck);        // stop checking
+      }
     }, 100);
-</script>
+  </script>
 
 </body>
 
