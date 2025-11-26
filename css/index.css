@@ -12,128 +12,173 @@ Licence: <a href="https://www.templateonweb.com/license">Website Template Licenc
 
 /*********************center_home****************/
 .center_hm {
-background: #0000009c;
-padding-top:100px;
-padding-bottom:100px;
+  background: #0000009c;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
+
 .center_h {
 
-background-position: center;
-}
-.center_h1{
-background-image: url(../img/herohome.JPG);
-}
-.center_h2{
-background-image: url(../img/construction-banner.png);
-}
-.center_h3{
-background-image: url(../img/interiors/herointeriors.jpg);
+  background-position: center;
 }
 
-.center_hl{
-padding-top:80px; 
- }
+.center_h1 {
+  background-image: url(../img/banner.png);
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: bgZoom 12s ease-in-out infinite;
+}
+
+@media (max-width: 992px) {
+  .center_h1 {
+    background-position: center center;
+    animation: none;
+    /* Disable animation on mobile for better coverage */
+  }
+}
+
+@keyframes bgZoom {
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 110%;
+  }
+
+  100% {
+    background-size: 100%;
+  }
+}
+
+
+.center_h2 {
+  background-image: url(../img/construction-banner.png);
+}
+
+.center_h3 {
+  background-image: url(../img/interiors/herointeriors.jpg);
+}
+
+.center_hl {
+  padding-top: 80px;
+}
+
 /*********************center_home_end****************/
 
 /*********************work****************/
-.work_1ri1:hover{
-background:#252531!important;
-color:#fff;
- }
-.work_1ri1:hover p{
-color:#fff;
- }
+.work_1ri1:hover {
+  background: #252531 !important;
+  color: #fff;
+}
+
+.work_1ri1:hover p {
+  color: #fff;
+}
+
 /*********************work_end****************/
 
 
 /*********************offer_o****************/
 #offer_o {
-background-image: url(../img/1.jpg);
-background-position: center;
+  background-image: url(../img/1.jpg);
+  background-position: center;
 }
+
 /*********************offer_o_end****************/
 
 
-@media screen and (max-width : 767px){
-.center_hm {
-padding-top: 50px;
-padding-bottom: 50px;
+@media screen and (max-width : 767px) {
+  .center_hm {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .center_hl {
+    padding-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .center_hl h6 {
+    text-align: center;
+  }
+
+  .center_hl .font_60 {
+    font-size: 40px;
+  }
+
+  .center_hl br {
+    display: none;
+  }
+
+  .center_hr {
+    text-align: center;
+  }
+
+  .work_1l {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .work_1ri1 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .work_1ri1 p {
+    text-align: left;
+  }
+
+  .work_2l img {
+    height: auto;
+  }
+
+  .work_2ri {
+    text-align: center;
+  }
+
+  .work_2ril {
+    margin-bottom: 15px;
+  }
+
+  .serv_1 br {
+    display: none;
+  }
+
+  .offer_lil {
+    margin-top: 10px;
+  }
+
+  .team_1r p {
+    text-align: left;
+  }
+
+  .team_1l p {
+    text-align: left;
+  }
+
 }
-.center_hl{
-padding-top:0;
-margin-bottom:15px;
- }
-.center_hl h6{
-text-align:center;
- }
-.center_hl .font_60{
-font-size:40px;
- }
-.center_hl br{
-display:none;
- }
-.center_hr{
-text-align:center;
- }
-.work_1l{
-margin-bottom:15px;
-text-align:center; 
- }
-.work_1ri1 {
-margin-top:8px;
-margin-bottom:8px;
-text-align:center; 
- }
-.work_1ri1 p{
-text-align:left; 
- }
-.work_2l img{
-height:auto; 
- }
-.work_2ri {
-text-align:center; 
- }
-.work_2ril {
-margin-bottom:15px; 
- }
 
-.serv_1  br{
-display:none; 
- }
+@media (min-width:576px) and (max-width:767px) {}
 
-.offer_lil{
-margin-top:10px; 
- }
-.team_1r  p{
-text-align:left; 
- }
-.team_1l p{
-text-align:left; 
- }
-
- }
-
-@media (min-width:576px) and (max-width:767px) {
-
- }
 @media (min-width:768px) and (max-width:991px) {
-.center_hl .font_60{
-font-size:40px;
- }
+  .center_hl .font_60 {
+    font-size: 40px;
+  }
 
- }
+}
 
-@media (min-width:992px) and (max-width:1200px) {
-
- }
+@media (min-width:992px) and (max-width:1200px) {}
 
 
 
- .popup1 {
+.popup1 {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -173,13 +218,14 @@ font-size:40px;
 /* Hidden box by default */
 .hover-options {
   position: absolute;
-  top: -60px; /* Show above icon */
+  top: -60px;
+  /* Show above icon */
   left: 50%;
   transform: translateX(-50%);
   background: #ffffff;
   padding: 8px 12px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   display: none;
   flex-direction: column;
   gap: 6px;
