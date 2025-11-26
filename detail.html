@@ -212,7 +212,7 @@
 						</li>
 
 						<li class="nav-item drop_conc">
-							<a class="button" href="#">Get a Free Quote</a>
+							<a class="button" id="openPopup">Get a Free Quote</a>
 						</li>
 
 					</ul>
@@ -554,6 +554,54 @@
 
 
 
+	<!-- Popup Modal -->
+	<div id="popupForm" class="popup">
+		<div class="popup-content">
+			<span class="close" id="closePopup">&times;</span>
+
+			<h2>Get a Free Quote</h2>
+
+			<form action="#" method="POST">
+				<div class="contact_2l">
+					<div class="blog_1dt3i row">
+						<div class="col-md-12">
+							<div class="blog_1dt3il">
+								<input class="form-control" name="name" placeholder="Name" type="text" required>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="blog_1dt3il">
+								<input class="form-control" name="email" placeholder="Email" type="email" required>
+							</div>
+						</div>
+					</div>
+
+					<div class="blog_1dt3i row mt-3">
+						<div class="col-md-12">
+							<div class="blog_1dt3il">
+								<input class="form-control" name="phone" placeholder="Phone" type="text" required>
+							</div>
+						</div>
+					</div>
+
+					<div class="blog_1dt3i row mt-3">
+						<div class="col-md-12">
+							<div class="blog_1dt3il">
+								<textarea name="message" placeholder="Messages" class="form-control form_text" rows="2"
+									required></textarea>
+
+								<h6 class="mb-0 mt-4 text-uppercase font_14">
+									<button type="submit" class="button_2">Submit Now</button>
+								</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<script src="js/script.js"></script>
 </body>
 
 </html>

@@ -361,7 +361,8 @@
                   +919966911136</span></a>
                   <a class="d-inline-block text-muted" href="#"><br> <span class="text-black fw-bold font_14">
                   +919573872734</span></a> -->
-              <a class="button" href="#">Get a Free Quote</a>
+              <!-- Button -->
+              <a class="button" id="openPopup">Get a Free Quote</a>
             </li>
 
           </ul>
@@ -370,9 +371,17 @@
     </nav>
   </section>
 
-  <style>
 
+
+
+
+  <style>
   </style>
+
+  <script>
+
+  </script>
+
   <section id="center" class="center_h center_h1">
     <div class="center_hm">
       <div class="container-xl">
@@ -387,7 +396,7 @@
                 tailored perfectly to your lifestyle and space.
               </p>
               <h6 class="mb-0 mt-4 text-uppercase font_14">
-                <a class="button" href="#">Get a Free Quote</a>
+                <a class="button" id="openPopup">Get a Free Quote</a>
               </h6>
             </div>
 
@@ -1450,9 +1459,54 @@
   <!-- CHATBOT SCRIPT -->
 
 
+  <!-- Popup Modal -->
+  <div id="popupForm" class="popup">
+    <div class="popup-content">
+      <span class="close" id="closePopup">&times;</span>
 
+      <h2>Get a Free Quote</h2>
 
+      <form action="#" method="POST">
+        <div class="contact_2l">
+          <div class="blog_1dt3i row">
+            <div class="col-md-12">
+              <div class="blog_1dt3il">
+                <input class="form-control" name="name" placeholder="Name" type="text" required>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="blog_1dt3il">
+                <input class="form-control" name="email" placeholder="Email" type="email" required>
+              </div>
+            </div>
+          </div>
 
+          <div class="blog_1dt3i row mt-3">
+            <div class="col-md-12">
+              <div class="blog_1dt3il">
+                <input class="form-control" name="phone" placeholder="Phone" type="text" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog_1dt3i row mt-3">
+            <div class="col-md-12">
+              <div class="blog_1dt3il">
+                <textarea name="message" placeholder="Messages" class="form-control form_text" rows="2"
+                  required></textarea>
+
+                <h6 class="mb-0 mt-4 text-uppercase font_14">
+                  <button type="submit" class="button_2">Submit Now</button>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
