@@ -552,29 +552,7 @@
 	</script>
 
 
-	<script>
-		const chatWindow = document.getElementById("chat-window");
-		const chatButton = document.getElementById("chatbot-button");
-		const closeChat = document.getElementById("close-chat");
 
-		// Open the chatbot
-		chatButton.onclick = () => {
-			chatWindow.style.display = "block";
-		};
-
-		// Close when click X
-		closeChat.onclick = () => {
-			chatWindow.style.display = "none";
-		};
-
-		// Close when clicking outside chatbot
-		document.addEventListener("click", function (event) {
-			const isClickInside = chatWindow.contains(event.target) || chatButton.contains(event.target);
-			if (!isClickInside) {
-				chatWindow.style.display = "none";
-			}
-		});
-	</script>
 
 </body>
 
