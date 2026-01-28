@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mr. Pradeep Reddy Project - Aaorama Interiors</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Using same styling as global/index but without navbar/footer -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .gallery-grid {
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .back-btn {
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-12">
+                <a href="gallery.html" class="button_2 back-btn"><i class="fa fa-arrow-left me-2"></i> Back to
+                    Portfolio</a>
+                <h1 class="mb-4">Mr. Pradeep Reddy Project</h1>
+                <p class="text-muted">Adibattla - Interior Renders</p>
+            </div>
+        </div>
+
+        <div class="row gallery-grid">
+            <!-- Note: Using placeholder images as PDF extraction is not available in full static environment -->
+            <!-- In a real deployment, these would be the extracted images from the PDF -->
+
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <a href="img/new/16.png" data-lightbox="project-set" data-title="Living Room"><img
+                            src="img/new/16.png" alt="Project Image 1"></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <a href="img/new/16.png" data-lightbox="project-set" data-title="Bedroom"><img src="img/new/16.png"
+                            alt="Project Image 2"></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <a href="img/new/16.png" data-lightbox="project-set" data-title="Kitchen"><img src="img/new/16.png"
+                            alt="Project Image 3"></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <a href="img/new/16.png" data-lightbox="project-set" data-title="Dining"><img src="img/new/16.png"
+                            alt="Project Image 4"></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <a href="img/new/16.png" data-lightbox="project-set" data-title="Details"><img src="img/new/16.png"
+                            alt="Project Image 5"></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="gallery-item">
+                    <a href="img/new/16.png" data-lightbox="project-set" data-title="View"><img src="img/new/16.png"
+                            alt="Project Image 6"></a>
+                </div>
+            </div>
+
+            <!-- Link to PDF if user wants to download -->
+            <div class="col-12 mt-4 text-center">
+                <p>For more details, view the full document:</p>
+                <a href="img/mr. pradeep reddy/Mr. Pradeep Reddy @ Adibattla - Interior Renders on 25-11-25.pdf"
+                    target="_blank" class="button">View PDF Document</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>
+</body>
+
+</html>
