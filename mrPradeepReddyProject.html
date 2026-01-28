@@ -22,8 +22,9 @@
         }
 
         .gallery-item {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             transition: transform 0.3s;
+            width: 100%;
         }
 
         .gallery-item:hover {
@@ -42,6 +43,11 @@
             margin-bottom: 20px;
             display: inline-block;
         }
+
+        /* Ensure images inside explicit cols have space */
+        .col-md-4 .gallery-item {
+            display: block;
+        }
     </style>
 </head>
 
@@ -56,44 +62,64 @@
             </div>
         </div>
 
-        <div class="row gallery-grid">
-            <!-- Note: Using placeholder images as PDF extraction is not available in full static environment -->
-            <!-- In a real deployment, these would be the extracted images from the PDF -->
+        <div class="row align-items-start">
+            <!-- Column 1 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="gallery-item mb-4">
+                    <a href="img/mr. pradeep reddy/1.png" data-lightbox="project-set" data-title="Living Room"><img
+                            src="img/mr. pradeep reddy/1.png" alt="Living Room"></a>
+                </div>
+                <div class="gallery-item mb-4">
+                    <a href="img/mr. pradeep reddy/2.png" data-lightbox="project-set" data-title="Bedroom"><img
+                            src="img/mr. pradeep reddy/2.png" alt="Bedroom"></a>
+                </div>
+                <div class="gallery-item mb-4">
+                    <a href="img/mr. pradeep reddy/3.png" data-lightbox="project-set" data-title="Kitchen"><img
+                            src="img/mr. pradeep reddy/3.png" alt="Kitchen"></a>
+                </div>
+                <div class="gallery-item mb-4">
+                    <a href="img/mr. pradeep reddy/9.png" data-lightbox="project-set" data-title="Dining"><img
+                            src="img/mr. pradeep reddy/9.png" alt="Dining"></a>
+                </div>
+            </div>
 
-            <div class="col-md-4 col-sm-6">
-                <div class="gallery-item">
-                    <a href="img/new/16.png" data-lightbox="project-set" data-title="Living Room"><img
-                            src="img/new/16.png" alt="Project Image 1"></a>
+            <!-- Column 2 (Center - Tall Image Middle) -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="gallery-item mb-4">
+                    <a href="img/mr. pradeep reddy/4.png" data-lightbox="project-set" data-title="Dining"><img
+                            src="img/mr. pradeep reddy/4.png" alt="Dining"></a>
+                </div>
+
+                <!-- Tall Image Centered -->
+                <div class="gallery-item mb-4">
+                    <a href="img/new/16.png" data-lightbox="project-set"
+                        data-title="Mr. Pradeep Reddy Project Gallery"><img src="img/new/16.png" alt="Puja Room"></a>
+                </div>
+
+                <div class="gallery-item mb-4">
+                    <a href="img/mr. pradeep reddy/8.png" data-lightbox="project-set" data-title="View"><img
+                            src="img/mr. pradeep reddy/8.png" alt="Interior View"></a>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="gallery-item">
-                    <a href="img/new/16.png" data-lightbox="project-set" data-title="Bedroom"><img src="img/new/16.png"
-                            alt="Project Image 2"></a>
+
+            <!-- Column 3 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="gallery-item mb-4">
+                    <a href="img/mr. pradeep reddy/6.png" data-lightbox="project-set" data-title="View"><img
+                            src="img/mr. pradeep reddy/6.png" alt="View"></a>
                 </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="gallery-item">
-                    <a href="img/new/16.png" data-lightbox="project-set" data-title="Kitchen"><img src="img/new/16.png"
-                            alt="Project Image 3"></a>
+                <!-- Duplicate image added by user, keeping it if intended, but cleaning structure -->
+                <div class="gallery-item mb-4">
+                    <a href="img/mr. pradeep reddy/5.png" data-lightbox="project-set" data-title="View"><img
+                            src="img/mr. pradeep reddy/5.png" alt="View"></a>
                 </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="gallery-item">
-                    <a href="img/new/16.png" data-lightbox="project-set" data-title="Dining"><img src="img/new/16.png"
-                            alt="Project Image 4"></a>
+                <div class="gallery-item mb-4">
+                    <a href="img/mr. pradeep reddy/7.png" data-lightbox="project-set" data-title="Dining"><img
+                            src="img/mr. pradeep reddy/7.png" alt="Dining"></a>
                 </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="gallery-item">
-                    <a href="img/new/16.png" data-lightbox="project-set" data-title="Details"><img src="img/new/16.png"
-                            alt="Project Image 5"></a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="gallery-item">
-                    <a href="img/new/16.png" data-lightbox="project-set" data-title="View"><img src="img/new/16.png"
-                            alt="Project Image 6"></a>
+                <div class="gallery-item mb-4">
+                    <a href="img/mr. pradeep reddy/7.png" data-lightbox="project-set" data-title="Dining"><img
+                            src="img/mr. pradeep reddy/7.png" alt="Dining"></a>
                 </div>
             </div>
 
@@ -104,10 +130,10 @@
                     target="_blank" class="button">View PDF Document</a>
             </div>
         </div>
-    </div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="lightbox/js/lightbox.min.js"></script>
 </body>
 
 </html>
