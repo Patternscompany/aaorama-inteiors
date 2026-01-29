@@ -342,6 +342,75 @@
 		</div>
 	</section>
 
+
+
+<section class="projects">
+		 <div class="container-xl">
+				<div class="row">
+					<div class="col-md-12 text-center my-5">
+						<h2 class="fw-bold">Our Recent Projects</h2>
+						
+					</div>
+					<div class="col-md-4 col-sm-6 mt-4">
+						<p class="text-muted text-center">Adibattla - Interior Renders</p>
+					<div class="team_2im">
+						<div class="team_2i position-relative hover-trigger">
+							<div class="team_2i1">
+								<div class="grid clearfix">
+									<figure class="effect-jazz mb-0">
+										<!-- Changed to trigger custom modal -->
+										<a href="javascript:void(0)" data-bs-toggle="modal"
+											data-bs-target="#projectModal"><img src="img/new/16.png" class="w-100"
+												alt="abc"></a>
+									</figure>
+								</div>
+							</div>
+							<div class="hover-overlay-text">
+								<h3>Mr. Pradeep Reddy<br>Project Gallery</h3>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- Custom Project Modal -->
+	<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content border-0 position-relative" style="background-color: rgba(0,0,0,0.9);">
+				<button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">×</button>
+				<div class="modal-body">
+					<div class="row align-items-center">
+						<div class="col-md-8 text-center">
+							<img src="img/new/16.png" class="img-fluid rounded" alt="Project Image"
+								style="max-height: 80vh;">
+						</div>
+						<div class="col-md-4 text-white text-md-start text-center mt-4 mt-md-0">
+							<h3 class="fw-bold mb-4 font_60" style="font-size: 2.5rem;">Mr. Pradeep Reddy Project</h3>
+							<!-- <p class="mb-4 text-white-50">Adibattla - Interior Renders</p> -->
+							<a href="mr-pradeep-reddy-project.html" class="btn-custom-view">View Details</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		 </div>
+</section>
+
+<style>
+	.projects figure{
+height:400px;
+border-radius: 15% 15% 15% 15%;
+	}
+	.projects figure img{
+		height:100%;
+		object-fit: cover;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3);
+
+	}
+</style>
+
+
 	<section id="team" class="p_3">
 		<div class="container-xl">
 
@@ -794,27 +863,7 @@
 					</div>
 
 				</div>
-				<div class="col-md-4 col-sm-6 mt-4">
-					<div class="team_2im">
-						<div class="team_2i position-relative hover-trigger">
-							<div class="team_2i1">
-								<div class="grid clearfix">
-									<figure class="effect-jazz mb-0">
-										<!-- Changed to trigger custom modal -->
-										<a href="javascript:void(0)" data-bs-toggle="modal"
-											data-bs-target="#projectModal"><img src="img/new/16.png" class="w-100"
-												alt="abc"></a>
-									</figure>
-								</div>
-							</div>
-							<div class="hover-overlay-text">
-								<h3>Mr. Pradeep Reddy<br>Project Gallery</h3>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
+				
 
 			</div>
 			<div class="team_3 row mt-5 bg_brow p-4 mx-0">
@@ -1189,27 +1238,7 @@ function closePopup(id) {
 		</div>
 	</div>
 
-	<!-- Custom Project Modal -->
-	<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-xl modal-dialog-centered">
-			<div class="modal-content border-0 position-relative" style="background-color: rgba(0,0,0,0.9);">
-				<button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">×</button>
-				<div class="modal-body">
-					<div class="row align-items-center">
-						<div class="col-md-8 text-center">
-							<img src="img/new/16.png" class="img-fluid rounded" alt="Project Image"
-								style="max-height: 80vh;">
-						</div>
-						<div class="col-md-4 text-white text-md-start text-center mt-4 mt-md-0">
-							<h3 class="fw-bold mb-4 font_60" style="font-size: 2.5rem;">Mr. Pradeep Reddy Project</h3>
-							<!-- <p class="mb-4 text-white-50">Adibattla - Interior Renders</p> -->
-							<a href="mrPradeepReddyProject.html" class="btn-custom-view">View Gallery</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 	<style>
 		.btn-custom-view {
@@ -1267,6 +1296,7 @@ function closePopup(id) {
 			pointer-events: none;
 			/* click through to image/link */
 			z-index: 5;
+			border-radius: 15% 15% 15% 15%;
 		}
 
 		.hover-overlay-text h3 {
